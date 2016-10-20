@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%
+% EFT Paper
+% v.1
+% R. Itay & B. Farmer & A. Manfredini
+%%%%%%%%%%%%%%%
+
+\RequirePackage{lineno}
+\documentclass[twocolumn, showpacs, showkeys, amsmath, amssymb, floatfix]{revtex4} 
+\usepackage[colorlinks=true, citecolor=green, filecolor=blue, linkcolor=blue, urlcolor=blue]{hyperref}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[perpage]{footmisc}
+	
+\newcommand \Leff{$\mathcal{L}_{\mathrm{eff}}$}
+\newcommand \Ly{$L_{\mathrm{y}}$}
+\newcommand \Qy{$\mathcal{Q}_{\mathrm{y}}$}
+\newcommand \keVcc{$\mathrm{keV}/\mathrm{c}^2$}
+\newcommand \keVr{$\mathrm{keV_{nr}}$}
+\newcommand \keVee{$\mathrm{keV_{ee}}$}
+\newcommand{\Xehund}{{XENON100}} 
+\newcommand{\Xeten}{{XENON10}}
+\newcommand{\Xe}{{\sc Xe}}
+\newcommand{\n}[1]{\mathrm{#1}}
+
+\newcommand{\cc}[1]{$c_{#1}^2\timesm_{Weak}^4$}
+
+
+%%%%%%%%%
+
+\begin{document}
+\linenumbers 
+
+\title{Effective Field Theory Approach to Elastic Scattering of Dark Matter in  \Xehund\ Detector 225 live days run}
+%\input{AuthorList}
+
+%\date{\today}
+
+\begin{abstract} 
+
+bla bla bla
+
+\end{abstract}
+
+\pacs{}
+\keywords{Dark Matter, EFT, Xenon}
+
+\maketitle 
+\section{Introduction}
+\section{The \Xehund\  Detector}
+The \Xehund\ detector is a cylindrical (30cm height X 30cm diameter) dual phase Xenon Time Projection Chamber (TPC) that holds 62 kg of Liquid \Xe\ (LXe) targets ~\cite{xe100_instr2012}. It operates at the Laboratori Nazionali del Gran Sasso (LNGS) in Italy. The detector consists a total of 242 1”-square Hamamatsu R8520-AL photomultiplier tubes (PMTs) employed in two arrays, at the top part (in the gas phase) and in the bottom immersed in LXe. a Particle interacting with the LXe deposits energy that creates both excited and ionized states. De-excitation creates a prompt scintillation signal ($S1$). ,  Ionized electrons are drifted in an electric field of $530$V/cm towards the liquid-gas interface, where they are extracted via a larger electric field of $\sim12$kV/cm. These electrons generates a proportional scintillation, which is called $S2$. The spatial distribution of the $S2$ signal on the top PMT array, determines the X-Y position, while the time difference between the two signals gives the z-coordinate, and thus a 3D position reconstructions is achieved.
+
+The ratio of S2/S1 is different weather the interaction is nuclear recoil (NR) or electronic recoil (ER) and thus this ratio is used as a discriminator between ER background coming from $\gamma$, $\beta$ and NR signal coming from a WIMP. 
+
+In previous \Xehund\ analyses the determination of the recoil energy was based on the size of S1 and the scintillation efficiency for the nuclear recoils, \Leff ~\cite{xe100_run10_si}. However in the last analysis ~\cite{xe100_run_combination} a new method was adopted taking into advantage also the S2 signal.
+      
+
+\section{The Analysis}
+\section{Results}
+
+
+
+
+%%% BIBLIOGRAPHY %%%
+
+\bibliographystyle{apsrev}
+\bibliography{EFTPaperBib}
+
+\end{document}
