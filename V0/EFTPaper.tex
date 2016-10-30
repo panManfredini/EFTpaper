@@ -58,12 +58,7 @@ In previous \Xehund\ analyses the determination of the recoil energy was based o
 In this work we analyse the data from \Xehund\ `s scientfic run II ~\cite{xe100_run10_si,xe100_run10_sd} , taken between February 28th,2011 and March 31st, 2012 with an exposure of 224.6 days and 34kg fiducial mass.  However we enlarge the energy range to be 3PE-180PE. In order to preform an blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet.
 \subsection{Analysis and Data Selection}
 \subsubsection{High Energy}
-In order to estimate the energy deposition in this region we use the \Leff\ based method which is given in Eq.~\ref{eq:LeffEnergyScale}
-\begin{equation}
-\label{eq:LeffEnergyScale}
-	E_{nr} = \frac{cS1}{L_y} \frac{1}{L_{eff}(E_{nr})} \frac{S_{ee}}{S_{nr}}
-\end{equation}
-The energy range in this region is bounded by the statistics of NR calibration data, namely $^{241}AmBe$.
+We define our signal region in the discrimination space (log(S2/S1) Vs S1). Taking the NR calibration sample mean and scaling it up such that in 30PE it coincide with the ER mean bounds the region from above. From below the signal is bounded by taking 3 sigma from the NR mean, this is done for preventing gamma-X events to penetrate the sample (see Fig. (add banding  binning here)).
 
 The cuts which are defined to low energy recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or naively extended to high energy depositions, however one cut is dropped and one is modified. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial fit given in Eq.~\ref{eq:AccFit} and presented in Fig.~\ref{fig:Acc}
 \begin{equation}
@@ -78,6 +73,28 @@ The cuts which are defined to low energy recoil only, are extended, modified or 
 \caption{The total acceptance of all cuts used, data from calibration in black and the fit in red.}
 \label{fig:Acc}
 \end{figure}
+
+In order to estimate the energy deposition in this region we use the \Leff\ based method which is given in Eq.~\ref{eq:LeffEnergyScale}
+\begin{equation}
+\label{eq:LeffEnergyScale}
+	E_{nr} = \frac{cS1}{L_y} \frac{1}{L_{eff}(E_{nr})} \frac{S_{ee}}{S_{nr}}
+\end{equation}
+The energy range in this region is bounded by the statistics of NR calibration data, namely $^{241}AmBe$.
+
+The signal model is then produced by taking the event rate spectra converting it to S1, applying the acceptance and the detector response (explained in ~\cite{xe100_ana2012}) to give the expected event rate in the detector for each operator. In fig~\ref{fig:signal} is an example of ...
+
+We divide our signal region into two bands in log(S2/S1). The bands are constructed such that the NR data sample is equally distributed between them. Each band is divided into several bins, for bins definitions see table (add table here and ref to figure). The number of bins is optimized using MC studies.
+
+In order to estimate the background, we choose a control region in which we expect no signal. The control region we chose is from the ER band mean and above to include most of the background see fig.~\ref{fig:controlRegion}.
+
+
+\begin{figure}[h!]
+\begin{minipage}{1.\linewidth}
+\centerline{\includegraphics[width=1.\linewidth]{Figures/PhaseSpace.eps}}
+\end{minipage}
+\caption{The total acceptance of all cuts used, data from calibration in black and the fit in red.}
+\label{fig:Acc}
+\end{figure}  
 
 \subsubsection{Low Energy}
 \subsection{Statistical Method}
