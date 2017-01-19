@@ -1,25 +1,6 @@
 \section{The Analysis}
 In this work we analyse the data from \Xehund\ `s scientfic run II ~\cite{xe100_run10_si,xe100_run10_sd} , taken between February 28th,2011 and March 31st, 2012 with an exposure of 224.6 days and 34kg fiducial mass.  However we enlarge the energy range to be 3PE-180PE. In order to preform an blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet.
-\subsection{Signal Model}
-For the low energy region ...explain shortly the 2D signal model, and give ref to run combination paper.
 
-In order to estimate the energy deposition in the high E region we use the \Leff\ based method which is given in Eq.~\ref{eq:LeffEnergyScale}
-\begin{equation}
-\label{eq:LeffEnergyScale}
-	E_{nr} = \frac{cS1}{L_y} \frac{1}{L_{eff}(E_{nr})} \frac{S_{ee}}{S_{nr}}
-\end{equation}
-The energy range in this region is bounded by the statistics of NR calibration data, namely $^{241}AmBe$.
-
-The signal model is then produced by taking the event rate spectra converting it to S1, applying the acceptance and the detector response (explained in ~\cite{xe100_ana2012}) to give the expected event rate in the detector for each operator. In fig~\ref{fig:signal} is an example of ...
-
-We divide our signal region into two bands in log(S2/S1). The bands are constructed such that the NR data sample is equally distributed between them. Each band is divided into several bins, for bins definitions see table (add table here and ref to figure). The number of bins is optimized using MC studies.
-
-
-
-\subsubsection{Elastic Scattering}
-Explain here how to get drde etc. give ref to fitzpatrick
-\subsubsection{Inelastic Scattering}
-explain the obtaining of inelastic and give ref to chang
 \subsection{Analysis and Data Selection}
 \subsubsection{High Energy}
 We define our signal region in the discrimination space (log(S2/S1) Vs S1). Taking the NR calibration sample mean and scaling it up such that in 30PE it coincide with the ER mean bounds the region from above. From below the signal is bounded by taking 3 sigma from the NR mean, this is done for preventing gamma-X events to penetrate the sample (see Fig. (add banding  binning here)).
@@ -57,3 +38,23 @@ Discussion on Uncertainty for HighE, few words about crosschecks, and table summ
 \subsubsection{Low Energy}
 short explanation on the bands on the background  uncertainties ref to run combination paper.
 
+\subsection{Signal Model}
+For the low energy region ...explain shortly the 2D signal model, and give ref to run combination paper.
+
+In order to estimate the energy deposition in the high E region we use the \Leff\ based method which is given in Eq.~\ref{eq:LeffEnergyScale}
+\begin{equation}
+\label{eq:LeffEnergyScale}
+	E_{nr} = \frac{cS1}{L_y} \frac{1}{L_{eff}(E_{nr})} \frac{S_{ee}}{S_{nr}}
+\end{equation}
+The energy range in this region is bounded by the statistics of NR calibration data, namely $^{241}AmBe$.
+
+The signal model is then produced by taking the event rate spectra converting it to S1, applying the acceptance and the detector response (explained in ~\cite{xe100_ana2012}) to give the expected event rate in the detector for each operator. In fig~\ref{fig:signal} is an example of ...
+
+We divide our signal region into two bands in log(S2/S1). The bands are constructed such that the NR data sample is equally distributed between them. Each band is divided into several bins, for bins definitions see table (add table here and ref to figure). The number of bins is optimized using MC studies.
+
+
+
+\subsubsection{Elastic Scattering}
+Explain here how to get drde etc. give ref to fitzpatrick
+\subsubsection{Inelastic Scattering}
+explain the obtaining of inelastic and give ref to chang
