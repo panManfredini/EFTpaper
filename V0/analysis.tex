@@ -1,11 +1,28 @@
-\section{The Analysis}
+\section{Data Analysis}
 \label{sec:Analysis}
-In this work we analyse the data from \Xehund\ `s scientfic run II ~\cite{xe100_run10_si,xe100_run10_sd} , taken between February 28th,2011 and March 31st, 2012 with an exposure of 224.6 days and 34kg fiducial mass.  However we enlarge the energy range to be 3PE-180PE. In order to preform a blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet.
+%In this work we analyse the data from \Xehund's scientfic run II~\cite{xe100_run10_si,xe100_run10_sd} recorded between February 2011 and March 2012, 
+In this work we perform a re-analyse of the scientfic run~II data recorded between February 2011 and March 2012, 
+corresponding to 224.6~live~days. \textcolor{red}{Some words about calibration data used}.
 
-\subsection{Analysis and Data Selection}
-\label{subsec:AnalysisAndDataSelection}
-\subsubsection{High Energy}
+This analysis extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, addressed in the following as the low energy channel,
+with a new study exploring the energy range between 30-180\,PE in $S1$ \textcolor{red}{maybe better to say in KeV??}. 
+%However we enlarge the energy range to be 3PE-180PE. In order to preform a blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet.
+The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in $cS1$, the other optimized for high energies recoils
+ranging from 30-180\,PE in $cS1$, which are finally statistically combined. 
+The relative region of interests (ROI) of these two channels are shown in Figure~\ref{fig:phasespace} and further described in the following sections. 
+
+This section describes the analysis procedures such as selection criterion, background expectation models and signal acceptace estimation  employed
+for the low and high energy channels, reported in Section~\ref{subsec:LowE} and~\ref{subsubsec:HighE} respectively. 
+%This work focuses on the high energy channel, a brief description of the low evenrgy channel is reported in Section~\ref{subsec:LowE}.
+
+\input{lowEnergy}
+
+\subsection{High Energy}
 \label{subsubsec:HighE}
+
+%\subsection{Analysis and Data Selection}
+%\subsection{Data Selections}
+%\label{subsec:AnalysisAndDataSelection}
 
 The data selection cuts which are defined to low energy recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or naively extended to high energy depositions, however one cut is dropped and two are modified. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. As a WIMP will interact only once in the detector we remove events whcih have more then one S2. we adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial presented in Figure~\ref{fig:Acc}
 
@@ -17,13 +34,17 @@ The data selection cuts which are defined to low energy recoil only, are extende
 \label{fig:Acc}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  THIS MAYBE BETTER UP, or part of it %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We define our signal region in the discrimination space (log(S2/S1) Vs S1). The upper bound is defined by taking the NR calibration sample mean and scaling it up such that in 30PE it coincide with the ER mean. From below the signal is bounded by taking 3 sigma from the NR mean, this is done for preventing gamma-X events to penetrate the sample. 
 
-We divide our signal region into two bands in log(S2/S1). The bands are constructed such that the NR data sample is equally distributed between them. Each band is divided into several bins. The definition and content of each bin is presented in table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. The main source of background is coming from ER leakage and hence, we estimate our background using calibration sample namely $^{232}Th$ and $^{60}Co$ to define the distribution between the bins. For sensitivity estimation we calculate a normalization factor in a sideband. For the final overall normalization we let the scaling factor be a free parameter to best fit the data.
+We divide our signal region into two bands in log(S2/S1). The bands are constructed such that the NR data sample is equally distributed between them. Each band is divided into several bins. The definition and content of each bin is presented in table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
+%%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
+The main source of background is coming from ER leakage and hence, we estimate our background using calibration sample namely $^{232}Th$ and $^{60}Co$ to define the distribution between the bins. 
+\textcolor{red}{Contribution from radiogening neutrons and accidental coincidence are negliglible for such a high energy recoil (is this true?).}
+For sensitivity estimation we calculate a normalization factor in a sideband. For the final overall normalization we let the scaling factor be a free parameter to best fit the data.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{table}
@@ -68,9 +89,6 @@ We divide our signal region into two bands in log(S2/S1). The bands are construc
 \end{figure}  
 
 
-\subsubsection{Low Energy}
-\label{subsubsec:LowE}
-short explanation on the bands on the background  uncertainties ref to run combination paper.
 
 
 \subsection{Signal Model}
