@@ -52,37 +52,37 @@ For sensitivity estimation we calculate a normalization factor in a sideband. Fo
 
 	 \begin{tabular}{|c| c| c| c| c| c |} 
  \hline
- Bin Number & Band Number & Lower E Limit & Higher E Limit & \# Background Events & \# Data Events \\  
+ Bin Number & Band  & Energy Range (cS1)  & \# Background Events & \# Data Events \\  
  \hline\hline
- 1 & 1 & 30  & 40  & 23.5 & 20 \\ 
+ 1 & upper & 30  - 40  & 23.5 & 20 \\ 
  \hline
- 2 & 1 & 40  & 50  & 15.7 & 17 \\
+ 2 & upper & 40  - 50  & 15.7 & 17 \\
  \hline
- 3 & 1 & 50  & 80  & 12.4 & 11 \\
+ 3 & upper & 50  - 80  & 12.4 & 11 \\
  \hline
- 4 & 1 & 80  & 120 & 1.1  & 1  \\
+ 4 & upper & 80  - 120 & 1.1  & 1  \\
  \hline
- 5 & 1 & 120 & 150 & 0.1  & 1  \\  
+ 5 & upper & 120 - 150 & 0.1  & 1  \\  
  \hline
- 6 & 1 & 150 & 180 & 0.08 & 0  \\  
+ 6 & upper & 150 - 180 & 0.08 & 0  \\  
  \hline
- 7 & 2 & 30  & 50  & 0.9  & 0  \\  
+ 7 & lower & 30  - 50  & 0.9  & 0  \\  
  \hline
- 8 & 2 & 50  & 120 & 0.35 & 0  \\  
+ 8 & lower & 50  - 120 & 0.35 & 0  \\  
  \hline
- 9 & 2 & 120 & 180 & 0.18 & 0  \\  
+ 9 & lower & 120 - 180 & 0.18 & 0  \\  
  \hline
 \end{tabular}
 }
 
-\caption{Bins definition. The estimated background event is calculated by taking the calibration sample and scaling it by $6.54e-3$, which is a the ration between data and calibration in a sideband. The number of data events is the number of events from the DM data set in each bin.} \label{table:BinDef}
+\caption{Bins definition. The estimated background event is calculated by taking the calibration sample and scaling it by $6.54e-3$, which is a the ration between data and calibration in a sideband. The number of data events is the number of events from the DM data set in each bin.\textcolor{blue}{I changed this table as well a bit}} \label{table:BinDef}
 
 \end{table}
 
 
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
-\centerline{\includegraphics[width=1.\linewidth]{Figures/phasespace.eps}}
+\centerline{\includegraphics[width=1.\linewidth]{Figures/eft_sr.png}}
 \end{minipage}
 \caption{$^{Co}60$ and $^{232}Th$ data in light gray and DM data in black dots. The upper and lower limits of the energy region are in dotted blue, and the median and bins are in solid.}
 \label{fig:phasespace}
