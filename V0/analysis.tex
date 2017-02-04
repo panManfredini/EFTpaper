@@ -2,19 +2,19 @@
 \label{sec:Analysis}
 %In this work we analyse the data from \Xehund's scientfic run II~\cite{xe100_run10_si,xe100_run10_sd} recorded between February 2011 and March 2012, 
 In this work we perform a re-analyse of the scientfic run~II data recorded between February 2011 and March 2012, 
-corresponding to 224.6~live~days. \textcolor{red}{Some words about calibration data used}.
+corresponding to 224.6~live~days. \textcolor{red}{Some words about calibration data used}. \RanComment{What do you mean , the amount of total CoTh and AmBe ? I haven't seen any explanations on this except for what are the calibration sources }
 
-This analysis extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, addressed in the following as the low energy channel,
-with a new study exploring the energy range between 30-180\,PE in $S1$ \textcolor{red}{maybe better to say in KeV??}. 
-%However we enlarge the energy range to be 3PE-180PE. In order to preform a blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet.
-The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in $cS1$, the other optimized for high energies recoils
-ranging from 30-180\,PE in $cS1$, which are finally statistically combined. 
+This analysis extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, addressed in the following as the low energy channel , with a new study exploring the energy range between 30-180\,PE (43-240\,keV \RanComment{Make sure this value is correct!!!}) in $S1$  \textcolor{red}{maybe better to say in KeV??}. 
+%However we enlarge the energy range to be 3PE-180PE. In order to preform a blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet. 
+\RanComment{Thre is a bit of repetition in these two paragraphs consider revising }The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in $cS1$ \RanComment{(LowE)}, the other optimized for high energies recoils
+ranging from 30-180\,PE in $cS1$ \RanComment{(highE)}, which are finally statistically combined. 
 The relative region of interests (ROI) of these two channels are shown in Figure~\ref{fig:phasespace} and further described in the following sections. 
 
-This section describes the analysis procedures such as selection criterion, background expectation models and signal acceptace estimation  employed
+\RanComment{Not sure this paper is so long we actually needs this full description, In any case I believe it is important to state the main new thing of this analysis which is the high energy part}
+This section describes the analysis procedures such as selection criterion, background expectation models and signal acceptance estimation  employed
 for the low and high energy channels, reported in Section~\ref{subsec:LowE} and~\ref{subsubsec:HighE} respectively. 
 %This work focuses on the high energy channel, a brief description of the low evenrgy channel is reported in Section~\ref{subsec:LowE}.
-
+\RanComment{I think maybe we should explain the S2 bottom used (might go in signal model or here)}
 \input{lowEnergy}
 
 \subsection{High Energy}
@@ -42,7 +42,7 @@ We divide our signal region into two bands in log(S2/S1). The bands are construc
 
 %%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
 The main source of background is coming from ER leakage and hence, we estimate our background using calibration sample namely $^{232}Th$ and $^{60}Co$ to define the distribution between the bins. 
-\textcolor{red}{Contribution from radiogening neutrons and accidental coincidence are negliglible for such a high energy recoil (is this true?).}
+\RanComment{Contribution from radiogenic(what's the correct spelling???) neutrons and accidental coincidence are negligible for such a high energy recoil .}
 For sensitivity estimation we calculate a normalization factor in a sideband. For the final overall normalization we let the scaling factor be a free parameter to best fit the data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
