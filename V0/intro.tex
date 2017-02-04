@@ -48,19 +48,20 @@ The \Xehund\ detector is a cylindrical %30\,cm~height, 30\,cm~diameter,
 dual-phase (liquid and gas) xenon time projection chamber (TPC). It is installed at the Laboratori Nazionali del Gran Sasso (LNGS) in Italy
 and hosts 161\,kg of liquid xenon (LXe), of which 62\,kg perform as active target ~\cite{xe100_instr2012}. 
 The detector consists of a total of 178~1-inch square Hamamatsu R8520-AL photomultiplier tubes (PMTs) employed in two arrays, at the top and at the bottom of the TPC. 
-%The detector consists a total of 242\,1-inch square Hamamatsu R8520-AL photomultiplier tubes (PMTs) employed in two arrays,  %FIXME  check what's the number of PMTs
-%at the top part (in the gas phase) and in the bottom immersed in LXe. 
-A particle interacting with the LXe deposits energy that creates both excited and ionized states. De-excitation induce a prompt scintillation signal ($S1$), while 
+%The detector consists a total of 242\,1-inch square Hamamatsu R8520-AL photomultiplier tubes (PMTs) employed in two arrays,  %FIXME  check what's the number of PMTs % Ran Itay - This is copied from Xenon paper so I dont think needs to be correct, and I think should be written.
+%at the top part (in the gas phase) and in the bottom immersed in LXe % Ran Itay, again I belive should stay. 
+A particle interacting with the LXe deposits energy that creates both excited and ionized states. De-excitation \textcolor{blue} {of the excited molecular} induce a prompt scintillation signal ($S1$), while 
 ionized electrons are drifted in an electric field of $530$V/cm towards the liquid-gas interface where they are extracted via a larger electric field of $\sim12$kV/cm. 
-These electrons generates a proportional scintillation, which is called $S2$. The spatial distribution of the $S2$ signal on the top PMT array, togheter with the 
-time difference between $S1$ and $S2$ provides X-Y and Z coordinates of the interaction, respectively. 
+These electrons generates a proportional scintillation, which is called $S2$. The spatial distribution of the $S2$ signal on the top PMT array, together with the time difference between $S1$ and $S2$ provides X-Y and Z coordinates of the interaction, respectively \textcolor{blue}{,and thus a 3D position reconstructions is achieved}. 
 %determines the X-Y position, while the time difference between the two signals gives the z-coordinate, and thus a 3D position reconstructions is achieved.
 
-The $S2/S1$ ratio is known to differ between nuclear recoil (NR) and electronic recoil (ER) interactions~\cite{}, thus used as  discriminatig variable between a WIMP signal and ER background.
-\textcolor{red}{explain here log(s2/s1) discriminating variable called y.}
+\textcolor{blue}{Interaction in different positions change solid angel with respect to the PMT array. Hence, a correction to the signal needs to be applied. This correction is done using a  light collection efficiency (LCE) map. The corrected signal (cS1,cS2) is spatially independent and uniform to all interactions~\cite{xe100_instr2012}}.
+
+The $S2/S1$ ratio is known to differ between nuclear recoil (NR) and electronic recoil (ER) interactions~\cite{}, thus used as  discriminating variable between a WIMP signal and ER background.
+\textcolor{red}{explain here log(s2/s1) discriminating variable called y.} % Ran Itay - I think you already explained this, what do you meen by the previuos  comment?
 % between ER background coming from $\gamma$, $\beta$ and NR signal coming from a WIMP. 
 
 %%%%%% this goes in signal model --- is the signal response %%%%%%%%%%%%%%%%%%%%%%%%%
 %In previous \Xehund\ analyses the determination of the recoil energy was based on the size of S1 and the scintillation efficiency for the nuclear recoils, \Leff ~\cite{xe100_run10_si}. However in the last analysis ~\cite{xe100_run_combination} a new method was adopted taking into advantage also the S2 signal.
       
-for S1 and S2 correction cite~\cite{xe100_instr2012}.
+%for S1 and S2 correction cite~\cite{xe100_instr2012}.
