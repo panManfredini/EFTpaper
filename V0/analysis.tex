@@ -2,11 +2,11 @@
 \label{sec:Analysis}
 %In this work we analyse the data from \Xehund's scientfic run II~\cite{xe100_run10_si,xe100_run10_sd} recorded between February 2011 and March 2012, 
 In this work we perform a re-analyse of the scientfic run~II data recorded between February 2011 and March 2012, 
-corresponding to 224.6~live~days. \textcolor{red}{Some words about calibration data used}. \RanComment{What do you mean , the amount of total CoTh and AmBe ? I haven't seen any explanations on this except for what are the calibration sources }
+corresponding to 224.6~live~days.\RanComment{ A calibration sample is obtained to characterize the detector response to NR and ER interactions, as well as for estimating the background from $\beta$ and $\gamma$-particles. For the ER sample we expose the detector to $^{60}$Co and $^{232}$Th sources, while for the NR sample we use $^{241}$AmBe.} \textcolor{red}{Some words about calibration data used}.
 
 This analysis extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, addressed in the following as the low energy channel , with a new study exploring the energy range between 30-180\,PE (43-240\,keV \RanComment{Make sure this value is correct!!!}) in $S1$  \textcolor{red}{maybe better to say in KeV??}. 
 %However we enlarge the energy range to be 3PE-180PE. In order to preform a blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet. 
-\RanComment{Thre is a bit of repetition in these two paragraphs consider revising }The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in $cS1$ \RanComment{(LowE)}, the other optimized for high energies recoils
+\RanComment{There is a bit of repetition in these two paragraphs consider revising }The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in $cS1$ \RanComment{(LowE)}, the other optimized for high energies recoils
 ranging from 30-180\,PE in $cS1$ \RanComment{(highE)}, which are finally statistically combined. 
 The relative region of interests (ROI) of these two channels are shown in Figure~\ref{fig:phasespace} and further described in the following sections. 
 
@@ -24,7 +24,7 @@ for the low and high energy channels, reported in Section~\ref{subsec:LowE} and~
 %\subsection{Data Selections}
 %\label{subsec:AnalysisAndDataSelection}
 
-The data selection cuts which are defined to low energy recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or naively extended to high energy depositions, however one cut is dropped and two are modified. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. As a WIMP will interact only once in the detector we remove events whcih have more then one S2. we adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial presented in Figure~\ref{fig:Acc}
+The data selection cuts which are defined to low energy recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or simply extended to high energy depositions, however \sout{one cut is dropped and two are modified} \RanComment{some required a more comprehensive study}. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. As a WIMP will interact only once in the detector we remove events whcih have more then one S2. we adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial presented in Figure~\ref{fig:Acc}
 
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
@@ -35,13 +35,15 @@ The data selection cuts which are defined to low energy recoil only, are extende
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%  THIS MAYBE BETTER UP, or part of it %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We define our signal region in the discrimination space (log(S2/S1) Vs S1). The upper bound is defined by taking the NR calibration sample mean and scaling it up such that in 30PE it coincide with the ER mean. From below the signal is bounded by taking 3 sigma from the NR mean, this is done for preventing gamma-X events to penetrate the sample. 
+We define our signal region in the discrimination space (log(S2/S1) Vs S1). The upper bound is defined by taking the NR calibration sample mean and scaling it up such that in 30PE it coincide with the ER mean. The lower is defined by taking $3\sigma$ from the NR mean, this is done for preventing gamma-X events to penetrate the sample.
 
-We divide our signal region into two bands in log(S2/S1). The bands are constructed such that the NR data sample is equally distributed between them. Each band is divided into several bins. The definition and content of each bin is presented in table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
+We divide our signal region into two bands in log(S2/S1). The bands are constructed such that the NR data sample is equally distributed between them, in each band there are $\sim3000$. Each band is divided into several bins. The definition and content of each bin is presented in table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
-The main source of background is coming from ER leakage and hence, we estimate our background using calibration sample namely $^{232}$Th and $^{60}$Co to define the distribution between the bins. 
+The main source of background is coming from ER leakage and hence, we estimate our background using calibration sample defining the distribution between the bins. 
 \RanComment{Contribution from radiogenic(what's the correct spelling???) neutrons and accidental coincidence are negligible for such a high energy recoil .}
 For sensitivity estimation we calculate a normalization factor in a sideband. For the final overall normalization we let the scaling factor be a free parameter to best fit the data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,7 +77,7 @@ For sensitivity estimation we calculate a normalization factor in a sideband. Fo
 \end{tabular}
 }
 
-\caption{Bins definition. The estimated background event is calculated by taking the calibration sample and scaling it by $6.54e-3$, which is a the ration between data and calibration in a sideband. The number of data events is the number of events from the DM data set in each bin.\textcolor{blue}{I changed this table as well a bit}} \label{table:BinDef}
+\caption{Bins definition. The estimated background event is calculated by taking the calibration sample and scaling it by $6.54\times10^{-3}$, which is a the ration between data and calibration in a sideband. The number of data events is the number of events from the DM data set in each bin.\textcolor{blue}{I changed this table as well a bit}} \label{table:BinDef}
 
 \end{table}
 
@@ -84,7 +86,7 @@ For sensitivity estimation we calculate a normalization factor in a sideband. Fo
 \begin{minipage}{1.\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/eft_sr.png}}
 \end{minipage}
-\caption{$^{60}$Co and $^{232}$Th data in light gray and DM data in black dots. The upper and lower limits of the energy region are in dotted blue, and the median and bins are in solid.}
+\caption{$^{60}\mathrm{Co}$ and $^{232}\mathrm{Th}$ data in light gray and DM data in black dots. The red line is the threshold between the lowE part and the highE one. In blue are the bands. For lowE constructed using data from a 50 GeV/$c^2$ WIMP. For the highE region the 9 bins are presented. top left is bin number 1,  top right is bin number 6, bottom left is bin number 7 and bottom right is bin number 9.}
 \label{fig:phasespace}
 \end{figure}  
 
