@@ -4,16 +4,23 @@
 \label{sec:LikelihoodFunction}
 The statistical interpretation of data is performed by means of a binned likelihood approach, hypothesis testing rely on a likelihood ratio test statistic, $\tilde{q}$, 
 and its asymptotic distributions~\cite{asympt}. The statistical combination between the two analysis channels is achieved merely by the product of the likelihoods,
-$\Llike_{\mathrm{lowE}}$ for the low energy channels and $\Llike_{\mathrm{highE}}$ for the high energy channel, respectively. 
-Note that the parametrization of uncertainties related to a sigle channel is considered independent, while only $L_{eff}$ is parametrized as correlated
-between the two channels.
-
+for the low ($\Llike_{\mathrm{lowE}}$) and high  ($\Llike_{\mathrm{highE}}$) energy channels as shown in equation~\ref{eq:FullLikelihood}. 
+Note that the parametrization of the uncertainty related to $\Leff$  is considered correlated between the two channels, as stressed by the common constraint term $\Llike_{\Leff}$.
 \begin{equation}
 \label{eq:FullLikelihood}
-\Llike = \Llike_{\mathrm{lowE}}(c_i^2,\Qy,\Leff) \times \Llike_{\mathrm{highE}}(c_i^2,\Leff)  .
+\Llike = \Llike_{\mathrm{lowE}} \times \Llike_{\mathrm{highE}} \times \Llike_{\Leff}
 \end{equation}
 
-The highE likelihood function is defined in Eq.~\ref{eq:HighELikelihood}
+A binned extended likelihood function is employed for the low energy channel, $\Llike_{\mathrm{lowE}}$, and described in detail in~\cite{xe100_run_combination}, only briefly summarized below.
+The ROI for the lowE channel is divided in 8 bands, depending  on the WIMP mass $m_{\chi}$. For each band a term of the type of equation~\ref{} is introduced.
+
+extended Poisson term 
+
+where ns, nb, fs, fb..... tqy and tleff are the parametrization of Leff~\cite{} and Qy~\cite{}. The MLE of the background expectation in each band $\epsilon$ is constrained by the statistical uncertainty 
+of the calibration sample in that band.
+
+
+For the high energy channel a binned likelihood fuction has been chosen, defined in Eq.~\ref{eq:HighELikelihood}
 \begin{equation}
 \label{eq:HighELikelihood}
 \Llike_{\mathrm{highE}}(c_k^2,\Leff) = \prod_{i} \big( Poiss(n^{obs}_{i}~|~n^{s}_{i} + n^{b}_{i}) \, \times Gauss(\eta^{b}_{i}) \big) ~ \times \Llike_{stat}(\epsilon^{s}_{j},\epsilon^{b}_{i}) \times \Llike^s_{unc}(\Leff, A)
