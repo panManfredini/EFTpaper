@@ -97,14 +97,8 @@ For sensitivity estimation we calculate a normalization factor in a sideband. Fo
 
 \subsection{Signal Model}
 \label{subsec:SignalModel}
-In order to estimate the energy deposition in the high E region we use the $\Leff$ based method which is given in Eq.~\ref{eq:LeffEnergyScale}
-\begin{equation}
-\label{eq:LeffEnergyScale}
-	E_{nr} = \frac{cS1}{L_y} \frac{1}{L_{eff}(E_{nr})} \frac{S_{ee}}{S_{nr}}
-\end{equation}
-The energy range in this region is bounded by the statistics of NR calibration data, namely $^{241}$AmBe.
+The signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{xe100_ana2012} to obtain the expected event rate in the detector in terms of detector variables (i.e. S1/S2). Since the nature of the analysis is quite different in each of our two signal regions, we use different signal models for each region; a 1D, cS1-only model for the new high energy region, and a full 2D, cS1/cS2 model for the `standard' low energy region, as described in \cite{xe100_run_combination}. Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (low E and high E).
 
-The signal model is then produced by taking the event rate spectra converting it to S1, applying the acceptance and the detector response (explained in ~\cite{xe100_ana2012}) to give the expected event rate in the detector for each operator see Figure~\ref{fig:HighE}.
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/SigHighO1O6.eps}}
@@ -113,10 +107,6 @@ The signal model is then produced by taking the event rate spectra converting it
 \label{fig:HighE}
 \end{figure} 
 
-
-
-
-\textbf{Ben add here} For the low energy region ...explain shortly the 2D signal model, and give ref to run combination paper. In fig~\ref{fig:LowE} is an example of the expected signal for $O_1$ and $O_6$ normalized to give 5 events in the total energy range (low E and high E)
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/SigLowO1O6.eps}}
@@ -125,13 +115,28 @@ The signal model is then produced by taking the event rate spectra converting it
 \label{fig:LowE}
 \end{figure}
 
+In order to calculate the S1 signal we use Eq.~\ref{eq:LeffEnergyScale} for both energy regions, 
+\begin{equation}
+\label{eq:LeffEnergyScale}
+	cS1 = E_{\mathrm{nr}} \cdot (\Ly \Leff)(E_{\mathrm{nr}})\cdot   \left(\frac{S_{nr}}{S_{ee}}\right) 
+\end{equation}
+where $E_{nr}$ is the expected recoil energy, $\Leff$ is the scintillation efficiency relative to 122$\keVee$, $\Ly$ is the light yield and $S_{ee}$ and $S_{nr}$ are the quenching factors for ER and NR respectively. The low threshold value for cS1 is 3PE, and recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. 
 
+For the low energy region S2 is calculated as well ~\cite{DataMCXenon}, using Eq.~\ref{eq:Qy}. As some of the top PMTs saturate we use only the bottom PMT for the energy scale, 
+\begin{equation}
+\label{eq:Qy}
+	cS2_{bottom} = E_{\mathrm{nr}}\Qy Y   
+\end{equation}  
+where $\Qy$ is the charge yield and $Y$ is an amplification factor. The bottom S2 threshold value is 73.5PE.
 
-
+For the high energy region we can not produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough energies. Therefore we use the NR calibration data distribution in log(S2/S1) to estimate the WIMP one. Above 180PE the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately and therefore this is the higher bound of this analysis.   
 
 \subsubsection{Elastic Scattering}
 \label{subsubsec:Elastic}
-Explain here how to get drde etc. give ref to fitzpatrick
+
+The expected recoil energy spectrum of each WIMP mass for each EFT operator is calculated using the Mathematica package \texttt{DMFormFactor} supplied by Anand et. al.~\cite{Fitzpatrick:MathTools,Anand:MathTools}. We use standard assumptions as in previous analyses (e.g \cite{xe100_run_combination}) regarding the local dark matter density and velocity distribution, namely $\rho_\mathrm{local} = 0.3$ GeV/cm\textsuperscript{3} and a Maxwell-Boltzman distribution with a mean given by the local circular velocity $v_0 = 220$ km/s and cut off at an escape velocity of $v_\mathrm{esc} = 544$ km/s. The responses of Xe nuclei to a scattering event are computed from one-body density matrices provided with the package, in contrast to the Helm form factors which have been used in previous analyses. These spectra are produced for the seven most abundant Xe isotopes (128,129,130,131,132,134 and 136), combined in proportion to the abundance of these isotopes in the experiment \cite{xe100_run10_sd}, then translated into expected signal rates via the method described above.
+
 \subsubsection{Inelastic WIMP Scattering}
 \label{subsubsec:Inelastic}
-explain the obtaining of inelastic and give ref to chang
+
+To obtain recoil spectra for WIMP-nucleon scattering for all EFT operators with inelastic kinematics, we use a modified version of \texttt{DMFormFactor} provided by Barello et. al. \cite{InelasticMath}. Assumptions regarding the dark matter halo and nuclear physics are unchanged. The mass splitting $\delta$ between dark matter states is varied from 0 to 1000 keV, well beyond the value at which the predicted rate is zero for the entire mass range we consider \BenComment{perhaps I should see what number that actually is}.
