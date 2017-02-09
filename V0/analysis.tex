@@ -115,6 +115,29 @@ The signal model is produced by taking a theoretical event rate spectrum, the pr
 \label{fig:LowE}
 \end{figure}
 
+The low E 2D signal model is computed according to Eq.~\ref{eq:low2D}
+\begin{multline}
+\label{eq:low2D}
+  \frac{\mathrm{d}^2 R}{\mathrm{d}cS1.\mathrm{d}cS2} = \epsilon_\mathrm{S1}(cS1).\epsilon_\mathrm{S2}(cS2) \\ 
+  \times \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.p_\mathrm{cS1}(\mathrm{cS1}|E).p_\mathrm{cS2}(\mathrm{cS2}|E) \, \mathrm{d}E
+\end{multline}
+
+where
+
+\begin{align}
+ p_\mathrm{cS1}(\mathrm{cS1}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{cS1}|N',0.5 \sqrt{N'}).\mathrm{Pois}(N'|\mu_\gamma) \\
+ p_\mathrm{cS2}(\mathrm{cS2}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{cS2}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
+\end{align}
+
+where $P_\mathrm{pmt}$ is a normal distribution with arguments as $N(x|\mu,\sigma)$, and where
+
+\begin{align}
+\mu_\gamma(E) &\approx E \cdot L_y \cdot L_\mathrm{eff}(E) \cdot \frac{S_\mathrm{nr}}{S_\mathrm{ee}} \\
+\mu_Q(E) &\approx Q_y(E) \cdot E
+\end{align}
+
+with fixed parameters $L_y = 2.28$, $S_\mathrm{nr} = 0.95$, $S_\mathrm{ee} = 0.58$, $Y = 8.4366$, and $\sigma_Y = 6.93$.
+
 In order to calculate the S1 signal we use Eq.~\ref{eq:LeffEnergyScale} for both energy regions, 
 \begin{equation}
 \label{eq:LeffEnergyScale}
