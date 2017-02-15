@@ -97,7 +97,7 @@ For sensitivity estimation we calculate a normalization factor in a sideband. Fo
 
 \subsection{Signal Model}
 \label{subsec:SignalModel}
-The signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{xe100_ana2012} to obtain the expected event rate in the detector in terms of detector variables (i.e. S1/S2). Since the nature of the analysis is quite different in each of our two signal regions, we use different signal models for each region; a 1D, cS1-only model for the new high energy region, and a full 2D, cS1/cS2 model for the `standard' low energy region, as described in \cite{xe100_run_combination}. Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (low E and high E).
+In summary, the signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{xe100_ana2012} to obtain the expected event rate in the detector in terms of detector variables (i.e. S1,S2). Since the nature of the analysis is quite different in each of our two signal regions, we use different signal models for each region; a 1D, \cSi-only model for the new high energy region, and a full 2D, \{\cSi,\cSiib\} model for the `standard' low energy region, as described in \cite{xe100_run_combination}. Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (low E and high E).
 
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
@@ -115,18 +115,19 @@ The signal model is produced by taking a theoretical event rate spectrum, the pr
 \label{fig:LowE}
 \end{figure}
 
-The low E 2D signal model is computed according to Eq.~\ref{eq:low2D}
+We now discuss details of the signal models. The low E 2D signal model is computed according to Eq.~\ref{eq:low2D}
 \begin{multline}
 \label{eq:low2D}
-  \frac{\mathrm{d}^2 R}{\mathrm{d}cS1.\mathrm{d}cS2} = \epsilon_\mathrm{S1}(cS1).\epsilon_\mathrm{S2}(cS2) \\ 
-  \times \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.p_\mathrm{cS1}(\mathrm{cS1}|E).p_\mathrm{cS2}(\mathrm{cS2}|E) \, \mathrm{d}E
+  \frac{\mathrm{d}^2 R}{\mathrm{d}\cSi.\mathrm{d}\cSiib} = \epsilon_\mathrm{S1}(\cSi).\epsilon_\mathrm{S2}(\cSiib) \\ 
+  \times \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.p_\mathrm{S1}(\mathrm{\cSi}|E).p_\mathrm{S2}(\mathrm{\cSiib}|E) \, \mathrm{d}E
 \end{multline}
 
 where
 
 \begin{align}
- p_\mathrm{cS1}(\mathrm{cS1}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{cS1}|N',0.5 \sqrt{N'}).\mathrm{Pois}(N'|\mu_\gamma) \\
- p_\mathrm{cS2}(\mathrm{cS2}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{cS2}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
+\label{eq:S1S2pdf}
+ p_\mathrm{S1}(\mathrm{\cSi}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSi}|N',0.5 \sqrt{N'}).\mathrm{Pois}(N'|\mu_\gamma) \\
+ p_\mathrm{S2}(\mathrm{\cSiib}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
 \end{align}
 
 where $P_\mathrm{pmt}$ is a normal distribution with arguments as $N(x|\mu,\sigma)$, and where
@@ -136,23 +137,16 @@ where $P_\mathrm{pmt}$ is a normal distribution with arguments as $N(x|\mu,\sigm
 \mu_Q(E) &\approx Q_y(E) \cdot E
 \end{align}
 
-with fixed parameters $L_y = 2.28$, $S_\mathrm{nr} = 0.95$, $S_\mathrm{ee} = 0.58$, $Y = 8.4366$, and $\sigma_Y = 6.93$.
+with fixed parameters $L_y = 2.28$, $S_\mathrm{nr} = 0.95$, $S_\mathrm{ee} = 0.58$, $Y = 8.4366$, and $\sigma_Y = 6.93$, where $E$ is the recoil energy, $\Leff$ is the scintillation efficiency relative to 122$\keVee$, $\Ly$ is the light yield, $\Qy$ is the charge yield, $Y$ is an amplification factor, and $S_{ee}$ and $S_{nr}$ are the quenching factors for ER and NR respectively. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters please see \cite{xe100_ana2012,xe100_run_combination}. Note also that, as some of the top PMTs saturate, we use only the bottom PMTs for the energy scale. Finally, the signal model is defined over the region $3 \mathrm{PE} < \cSi < 30 \mathrm{PE}$, with $\cSiib > 73.5 \mathrm{PE}$, and with acceptances as in \cite{xe100_run_combination}.
 
-In order to calculate the S1 signal we use Eq.~\ref{eq:LeffEnergyScale} for both energy regions, 
-\begin{equation}
-\label{eq:LeffEnergyScale}
-	cS1 = E_{\mathrm{nr}} \cdot (\Ly \Leff)(E_{\mathrm{nr}})\cdot   \left(\frac{S_{nr}}{S_{ee}}\right) 
-\end{equation}
-where $E_{nr}$ is the expected recoil energy, $\Leff$ is the scintillation efficiency relative to 122$\keVee$, $\Ly$ is the light yield and $S_{ee}$ and $S_{nr}$ are the quenching factors for ER and NR respectively. The low threshold value for cS1 is 3PE, and recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. 
+For the high energy region we can not produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough energies. Therefore we use the NR calibration data distribution in log(S2/S1) to estimate the WIMP one. Above 180PE in \cSi the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately and therefore this is the higher bound of this analysis. We therefore require only a prediction of the $cSi$ distribution:
 
-For the low energy region S2 is calculated as well ~\cite{DataMCXenon}, using Eq.~\ref{eq:Qy}. As some of the top PMTs saturate we use only the bottom PMT for the energy scale, 
-\begin{equation}
-\label{eq:Qy}
-	cS2_{bottom} = E_{\mathrm{nr}}\Qy Y   
-\end{equation}  
-where $\Qy$ is the charge yield and $Y$ is an amplification factor. The bottom S2 threshold value is 73.5PE.
+\begin{multline}
+\label{eq:low2D}
+  \frac{\mathrm{d} R}{\mathrm{d}\cSi} = \epsilon_\mathrm{S1}(\cSi) \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.\epsilon_\mathrm{S2'}(E).p_\mathrm{S1}(\mathrm{\cSi}|E) \, \mathrm{d}E
+\end{multline}
 
-For the high energy region we can not produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough energies. Therefore we use the NR calibration data distribution in log(S2/S1) to estimate the WIMP one. Above 180PE the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately and therefore this is the higher bound of this analysis.   
+where $p_\mathrm{S1}(\mathrm{\cSi}|E)$ is computed as in Eq. \ref{eq:S1S2pdf}. The S1 acceptance $\epsilon_\mathrm{S1}(\cSi)$ is given in Fig. \ref{fig:Acc}, and the S2 acceptance $\epsilon_\mathrm{S2'}(E)$ is negligibly different from one over the signal region $30 \mathrm{PE} < \cSi < 180 \mathrm{PE}$.
 
 \subsubsection{Elastic Scattering}
 \label{subsubsec:Elastic}
