@@ -5,7 +5,7 @@ corresponding to 224.6~live~days. The characterization of \RanComment{the} detec
 %\sout{as well as for estimating the background from $\beta$ and $\gamma$-particles. For the ER sample we expose the detector to $^{60}$Co and $^{232}$Th sources, while for the NR sample we use $^{241}$AmBe.}
 
 
-This work extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, addressed in the following as the low energy channel , with a new study exploring the energy range between 43-240\,keV \RanComment{Make sure this value is correct!!!}. 
+This work extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, addressed in the following as the low energy channel , with a new study exploring the energy range between 43-240\,keV 
 %However we enlarge the energy range to be 3PE-180PE. In order to preform a blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet.
 The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in $cS1$ (lowE), the other optimized for high energies recoils
 ranging from 30-180\,PE in $cS1$\RanComment{cS1 ??} (highE), which are finally statistically combined. 
@@ -26,7 +26,7 @@ The relative region of interests (ROI) of these two channels are shown in Figure
 %\subsection{Data Selections}
 %\label{subsec:AnalysisAndDataSelection}
 
-The data selection cuts which are defined to low energy recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or simply extended to high energy depositions, however \sout{one cut is dropped and two are modified} \RanComment{some required a more comprehensive study}. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. As a WIMP will interact only once in the detector we remove events whcih have more then one S2. we adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial presented in Figure~\ref{fig:Acc}
+The data selection cuts which are defined to low energy \RanComment{Add run10 citation???} recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or simply extended to high energy depositions, however \sout{one cut is dropped and two are modified}. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. As a WIMP will interact only once in the detector we remove events whcih have more then one S2. we adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial presented in Figure~\ref{fig:Acc}
 
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
@@ -36,7 +36,7 @@ The data selection cuts which are defined to low energy recoil only, are extende
 \label{fig:Acc}
 \end{figure}
 
-We define our signal region in the discrimination (y,S1)-plane using $^{241}$AmBe calibration data. The upper bound is defined such that the ROI is not contaminated from contribution due to xenon exitation lines.
+We define our signal region in the discrimination (y,S1)-plane using $^{241}$AmBe calibration data. The upper bound is defined such that the ROI is not contaminated from contribution due to xenon excitation lines.
 The lower is defined as the 3\,$\sigma$ acceptance quantile of the NR distribution, this is done for preventing gamma-X events to penetrate the sample.
 
 We divide our signal region into two bands in log(S2/S1). The bands are constructed such that the NR data sample is equally distributed between them, in each band there are $\sim3000$. Each band is divided into several bins. The definition and content of each bin is presented in table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
@@ -46,7 +46,7 @@ We divide our signal region into two bands in log(S2/S1). The bands are construc
 
 %%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
 The main source of background is coming from ER leakage and hence, we estimate our background using calibration sample defining the distribution between the bins. 
-\RanComment{Contribution from radiogenic(what's the correct spelling???) neutrons and accidental coincidence are negligible for such a high energy recoil .}
+\RanComment{Contribution from radiogenic (what's the correct spelling???) neutrons and accidental coincidence are negligible for such a high energy recoil .}
 For sensitivity estimation we calculate a normalization factor in a sideband. For the final overall normalization we let the scaling factor be a free parameter to best fit the data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -97,7 +97,46 @@ For sensitivity estimation we calculate a normalization factor in a sideband. Fo
 
 \subsection{Signal Model}
 \label{subsec:SignalModel}
-In summary, the signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{xe100_ana2012} to obtain the expected event rate in the detector in terms of detector variables (i.e. S1,S2). Since the nature of the analysis is quite different in each of our two signal regions, we use different signal models for each region; a 1D, \cSi-only model for the new high energy region, and a full 2D, \{\cSi,\cSiib\} model for the `standard' low energy region, as described in \cite{xe100_run_combination}. Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (low E and high E).
+In summary, the signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{xe100_ana2012} \RanComment{adopting the modification stated above,} to obtain the expected event rate in the detector in terms of detector variables (i.e. cS1,cS2). \sout{Since the nature of the analysis is quite different in each of our two signal regions, we use different signal models for each region; a 1D, \cSi-only model for the new high energy region, and a full 2D, \{\cSi,\cSiib\} model for the `standard' low energy region, as described in \cite{xe100_run_combination}} \RanComment{We adopt different methods because of different reasons, plus the term 1D and 2D is confusing, we calculate the s1 and s2 for both cases}. 
+
+\RanComment{Moved this paragraph here}
+We now discuss details of the signal models. \sout{The lowE 2D signal model is computed according to Eq.~\ref{eq:low2D}}
+In order to calculate the expected value of the signal in cS1, we use Eq.~\ref{eq:LeffEnergyScale} for both energy regions, 
+\begin{equation}
+\label{eq:LeffEnergyScale}
+	cS1 = E_{\mathrm{nr}} \cdot (\Ly \Leff)(E_{\mathrm{nr}})\cdot   \left(\frac{S_{nr}}{S_{ee}}\right) 
+\end{equation}
+%\begin{multline}
+%\label{eq:low2D}
+%  \frac{\mathrm{d}^2 R}{\mathrm{d}\cSi.\mathrm{d}\cSiib} = \epsilon_\mathrm{S1}(\cSi).\epsilon_\mathrm{S2}(\cSiib) \\ 
+%  \times \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.p_\mathrm{S1}(\mathrm{\cSi}|E).p_\mathrm{S2}(\mathrm{\cSiib}|E) \, \mathrm{d}E
+%\end{multline}
+
+%where
+%
+%\begin{align}
+%\label{eq:S1S2pdf}
+% p_\mathrm{S1}(\mathrm{\cSi}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSi}|N',0.5 \sqrt{N'}).\mathrm{Pois}(N'|\mu_\gamma) \\
+% p_\mathrm{S2}(\mathrm{\cSiib}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
+%\end{align}
+%
+%where $P_\mathrm{pmt}$ is a normal distribution with arguments as $N(x|\mu,\sigma)$, and where
+%
+%\begin{align}
+%\mu_\gamma(E) &\approx E \cdot L_y \cdot L_\mathrm{eff}(E) \cdot \frac{S_\mathrm{nr}}{S_\mathrm{ee}} \\
+%\mu_Q(E) &\approx Q_y(E) \cdot E
+%\end{align}
+
+with fixed parameters $L_y = 2.28$, $S_\mathrm{nr} = 0.95$, $S_\mathrm{ee} = 0.58$, \sout{$Y = 8.4366$, and $\sigma_Y = 6.93$}, where $E$ is the recoil energy, $\Leff$ is the scintillation efficiency relative to 122$\keVee$, $\Ly$ is the light yield, \sout{$\Qy$ is the charge yield, $Y$ is an amplification factor}, and $S_{ee}$ and $S_{nr}$ are the quenching factors for ER and NR respectively. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters please see \cite{xe100_ana2012,xe100_run_combination}. \RanComment{For the lowE region, S2 can be calculated as well~\cite{DataMCXenon}, using Eq.~\ref{eq:Qy}, where $Y = 8.4366$ is the amplification factor determined from the detector response to single electrons~\cite{XenonSingleElectron}, and $\Qy$ is the charge yield. Note that as some of the top PMTs saturate we use only the bottom PMT for energy scale in S2. 
+\begin{equation}
+\label{eq:Qy}
+	cS2_{bottom} = E_{\mathrm{nr}}\Qy Y   
+\end{equation}  } \sout{Note also that, as some of the top PMTs saturate, we use only the bottom PMTs for the energy scale.}  \RanComment{Taking into account the detector and PMT responses, and the acceptance as in \cite{xe100_run_combination} \sout{Finally, the signal model is defined} deffines the lowE signal model over the region $3 \mathrm{PE} < \cSi < 30 \mathrm{PE}$, with $\cSiib > 73.5 \mathrm{PE}$, \sout{and with acceptances as in \cite{xe100_run_combination}}}.
+
+\RanComment{I moved this paragraph here}
+For the high energy region we can not produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough energies. Therefore we use the NR calibration data distribution in log($\mathrm{cS2_b/cS1}$) to estimate the WIMP one. Above 180PE in \cSi\ the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately and therefore this is the higher bound of this analysis. We therefore require only a prediction of the \cSi\ distribution. Applying detector and PMT responses, as well as the acceptance given in~\ref{fig:Acc} defines the highE signal model.
+
+Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (lowE and highE).
 
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
@@ -115,39 +154,18 @@ In summary, the signal model is produced by taking a theoretical event rate spec
 \label{fig:LowE}
 \end{figure}
 
-We now discuss details of the signal models. The low E 2D signal model is computed according to Eq.~\ref{eq:low2D}
-\begin{multline}
-\label{eq:low2D}
-  \frac{\mathrm{d}^2 R}{\mathrm{d}\cSi.\mathrm{d}\cSiib} = \epsilon_\mathrm{S1}(\cSi).\epsilon_\mathrm{S2}(\cSiib) \\ 
-  \times \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.p_\mathrm{S1}(\mathrm{\cSi}|E).p_\mathrm{S2}(\mathrm{\cSiib}|E) \, \mathrm{d}E
-\end{multline}
 
-where
 
-\begin{align}
-\label{eq:S1S2pdf}
- p_\mathrm{S1}(\mathrm{\cSi}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSi}|N',0.5 \sqrt{N'}).\mathrm{Pois}(N'|\mu_\gamma) \\
- p_\mathrm{S2}(\mathrm{\cSiib}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
-\end{align}
 
-where $P_\mathrm{pmt}$ is a normal distribution with arguments as $N(x|\mu,\sigma)$, $\mathrm{Pois}(k|\mu)$ is a Poisson distribution with counts $k$ and mean $\mu$, and where
+%
+%\begin{multline}
+%\label{eq:high2D}
+%  \frac{\mathrm{d} R}{\mathrm{d}\cSi} = \epsilon_\mathrm{S1}(\cSi) \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.\epsilon_\mathrm{S2'}(E).p_\mathrm{S1}(\mathrm{\cSi}|E) \, \mathrm{d}E
+%\end{multline}
 
-\begin{align}
-\mu_\gamma(E) &\approx E \cdot L_y \cdot L_\mathrm{eff}(E) \cdot \frac{S_\mathrm{nr}}{S_\mathrm{ee}} \\
-\mu_Q(E) &\approx Q_y(E) \cdot E
-\end{align}
-
-with fixed parameters $L_y = 2.28$, $S_\mathrm{nr} = 0.95$, $S_\mathrm{ee} = 0.58$, $Y = 8.4366$, and $\sigma_Y = 6.93$, where $E$ is the recoil energy, $\Leff$ is the scintillation efficiency relative to 122$\keVee$, $\Ly$ is the light yield, $\Qy$ is the charge yield, $Y$ is an amplification factor, and $S_{ee}$ and $S_{nr}$ are the quenching factors for ER and NR respectively. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters please see \cite{xe100_ana2012,xe100_run_combination}. Note also that, as some of the top PMTs saturate, we use only the bottom PMTs for the energy scale. Finally, the signal model is defined over the region $3 \mathrm{PE} < \cSi < 30 \mathrm{PE}$, with $\cSiib > 73.5 \mathrm{PE}$, and with acceptances as in \cite{xe100_run_combination}.
-
-For the high energy region we can not produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough energies. Therefore we use the NR calibration data distribution in log(S2/S1) to estimate the WIMP one. Above 180PE in \cSi{} the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately and therefore this is the higher bound of this analysis. We therefore require only a prediction of the \cSi{} distribution:
-
-\begin{equation}
-\label{eq:high2D}
-  \frac{\mathrm{d} R}{\mathrm{d}\cSi} = \epsilon_\mathrm{S1}(\cSi) \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.\epsilon_\mathrm{S2'}(E).p_\mathrm{S1}(\mathrm{\cSi}|E) \, \mathrm{d}E
-\end{equation}
-
+\sout{
 where $p_\mathrm{S1}(\mathrm{\cSi}|E)$ is computed as in Eq. \ref{eq:S1S2pdf}. The S1 acceptance $\epsilon_\mathrm{S1}(\cSi)$ is given in Fig. \ref{fig:Acc}, and the S2 acceptance $\epsilon_\mathrm{S2'}(E)$ is negligibly different from one over the signal region $30 \mathrm{PE} < \cSi < 180 \mathrm{PE}$.
-
+}
 \subsubsection{Elastic Scattering}
 \label{subsubsec:Elastic}
 
@@ -156,4 +174,4 @@ The expected recoil energy spectrum of each WIMP mass for each EFT operator is c
 \subsubsection{Inelastic WIMP Scattering}
 \label{subsubsec:Inelastic}
 
-To obtain recoil spectra for WIMP-nucleon scattering for all EFT operators with inelastic kinematics, we use a modified version of \texttt{DMFormFactor} provided by Barello et. al. \cite{InelasticMath}. Assumptions regarding the dark matter halo and nuclear physics are unchanged. The mass splitting $\delta$ between dark matter states is varied from 0 to 1000 keV, well beyond the value at which the predicted rate is zero for the entire mass range we consider \BenComment{perhaps I should see what number that actually is}.
+To obtain recoil spectra for WIMP-nucleon scattering for all EFT operators with inelastic kinematics, we use a modified version of \texttt{DMFormFactor} provided by Barello et. al. \cite{InelasticMath}. Assumptions regarding the dark matter halo and nuclear physics are unchanged. The mass splitting $\delta$ between dark matter states is varied from 0 to \sout{1000} \RanComment{300} keV, \sout{well} beyond the value at which the predicted rate is zero for the entire mass range we consider (\RanComment{we see nothing above 250keV mass splitting}) \BenComment{perhaps I should see what number that actually is}.
