@@ -1,30 +1,32 @@
 %Explanation of the likelihood methods used, short explaination of the likelihood parts and constraints for combination, joint usage of nuisance parameters {Leff}.
 
-\subsection{The Likelihood Function}
+\subsection{Uncertainty Parametrization and Statistical Inference }
 \label{sec:LikelihoodFunction}
 The statistical interpretation of data is performed by means of a binned profiled likelihood approach, hypothesis testing rely on a likelihood ratio test statistic, $\tilde{q}$, 
-and its asymptotic distributions~\cite{asympt}. The statistical combination between the two analysis channels is achieved merely by the product of the likelihood functions,
+and its asymptotic distributions~\cite{asympt}. The statistical combination between the two analysis channels is achieved merely by the product of the likelihood functions.
+Both analysis parametrize the NR relative scintillation efficiency, $\Leff$, based on existing measurements~\cite{run8Result}, its uncertainty is the major contributor to energy 
+scale uncertainties and considered as correlated between the two analysis channels.
+Throught this study, all the parameters related to systematic uncertainties are assumed to be normally distributed.
 %for the low ($\Llike_{\mathrm{lowE}}$) and high  ($\Llike_{\mathrm{highE}}$) energy channels as shown in equation~\ref{eq:FullLikelihood}. 
-note that the parametrization of the uncertainty related to $\Leff$  is considered correlated between the two channels. %, as stressed by the common constraint term $\Llike_{\Leff}$.
 %\begin{equation}
 %\label{eq:FullLikelihood}
 %\Llike = \Llike_{\mathrm{lowE}} \times \Llike_{\mathrm{highE}} \times \Llike_{\Leff}
 %\end{equation}
 
-For the low energy channel an extended likelihood function is employed very similarly to what reported in~\cite{Aprile:2011hx} and described in detail in~\cite{xe100_run_combination}, 
-only briefly summarized here. The discriminating variable are cS1 and cS2 in the ROI described in section~\ref{}, the phase space is divided into eight WIMP mass dependent bands
-where events are counted, this binned approach is extended with the corresponding cS1 probability density functions.
-The total normalization of the background is a parameter of the model and fit to data. 
-An uncertainty  is assigned to the relative normalization of each bands according to the corresponding statistical uncertainty of the calibration sample.
+For the low energy channel an extended likelihood function is employed very similarly to what reported in~\cite{Aprile:2011hx} and described in detail in~\cite{xe100_run_combination}. 
+The ROI discriminating (cS1,cS2)-plane is divided into eight WIMP mass dependent bands where events are counted, this binned approach is extended with the corresponding cS1-projected pdf of each band. The total normalization of the background is fit to data, and an uncertainty  is assigned to the relative normalization 
+of each band according to the corresponding statistical uncertainty of the calibration sample.
 %The MLE of the background expectation in each band is constrained by the statistical uncertainty of the calibration sample in that band. 
-Parametrization of energy scale uncertainties is performed as described in~\cite{} for $\Leff$ and in~\cite{} $\Qy$ signal model parameters, complex signal 
-shape variations are modeled via simulation.
+Signal shape variations due to energy scale uncertainty are modeled via simulation, additionally to $\Leff$, uncertainties due to the charge 
+yield function, $\Qy$, are parametrized as described in~\cite{QY}.
 
-The high energy channel employs a binned likelihood fuction defined in the (cS1,cS2)-region described in section~\ref{}. Observed and expected event yield are
-compared in the 9 bins, the extended approach described above was not advisable given the large statistical uncertainty of the backround model.
+The high energy channel analysis employs a binned likelihood fuction. Observed and expected event yield are compared in the nine ROI (cS1,cS2)-bins described in section~\ref{subsubsec:HighE}. 
+Given the large statistical uncertainty of the backround model the above extended likelihood approach is not repeated here.
 The MLE of the background expectation in each bin is constrained by the statistical uncertainty of the calibration sample, while the total 
-normalization is fit to the data. Additionally, \textcolor{blue}{to take into account effects (like gammaX.... to say better) a systematic uncertainty of 20\% is assigned to each bin}.
-Uncertainty on the signal acceptance to analysis selection are introduced as described in section~\ref{}, uncertainty on the $\Leff$ are parametrized as described above.
+normalization is fit to the data. Additionally, to account for potential mismodeling of the expected background distribution, mainly due anlomalous multiple scatter events,
+a systematic uncertainty of 20\% is assigned independently to each bin. In this channel, uncertainty on the signal acceptance of analysis selections are computed for each signal hypotesis
+using the parametrized acceptance curve shown in Figure~\ref{fig:Acc}.
+Uncertainties on the signal model (cS1-cS2) distribution due to $^{241}$AmBe sample statistical fluctuations, as well as energy scale shape variation due to $\Leff$ uncertainties are implemented.
 
 
 
