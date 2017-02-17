@@ -1,6 +1,6 @@
 \section{Data Analysis}
 \label{sec:Analysis}
-In this work we perform a re-analyse of the scientfic run~II data recorded between February 2011 and March 2012, 
+In this work we perform a re-analyse of the scientific run~II data recorded between February 2011 and March 2012, 
 corresponding to 224.6~live~days. The characterization of \RanComment{the} detector response to ER interactions is performed using data from dedicated calibrations campaign with $^{60}$Co and $^{232}$Th radioactive sources \RanComment{Should we also mention calibration data is used also for background estimation???}, while for NR interactions data from $^{241}$AmBe calibration campaign are employed.
 %\sout{as well as for estimating the background from $\beta$ and $\gamma$-particles. For the ER sample we expose the detector to $^{60}$Co and $^{232}$Th sources, while for the NR sample we use $^{241}$AmBe.}
 
@@ -29,7 +29,7 @@ The relative region of interests (ROI) of these two channels are shown in Figure
 The data selection cuts which are defined to low energy \RanComment{Add run10 citation???} recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or simply extended to high energy depositions, however \sout{one cut is dropped and two are modified}. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. As a WIMP will interact only once in the detector we remove events whcih have more then one S2. we adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial presented in Figure~\ref{fig:Acc}
 
 \begin{figure}[h!]
-\begin{minipage}{1.\linewidth}
+\begin{minipage}{0.9\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/Acceptance.eps}}
 \end{minipage}
 \caption{The total acceptance of all cuts used, data from calibration in black and the fit in red.}
@@ -52,7 +52,7 @@ For sensitivity estimation we calculate a normalization factor in a sideband. Fo
 
 
 \begin{table}
-\resizebox{\columnwidth}{!}{
+\resizebox{1.\columnwidth}{!}{
 
 	 \begin{tabular}{|c| c| c| c| c| c |} 
  \hline
@@ -85,8 +85,8 @@ For sensitivity estimation we calculate a normalization factor in a sideband. Fo
 
 
 \begin{figure}[h!]
-\begin{minipage}{1.\linewidth}
-\centerline{\includegraphics[width=1.\linewidth]{Figures/eft_sr.eps}}
+\begin{minipage}{1\linewidth}
+\centerline{\includegraphics[width=1\linewidth]{Figures/eft_sr.eps}}
 \end{minipage}
 \caption{$^{60}\mathrm{Co}$ and $^{232}\mathrm{Th}$ data in light gray and DM data in black dots. The red line is the threshold between the lowE part and the highE one. In blue are the bands. For lowE constructed using data from a 50 GeV/$c^2$ WIMP. For the highE region the 9 bins are presented. top left is bin number 1,  top right is bin number 6, bottom left is bin number 7 and bottom right is bin number 9.}
 \label{fig:phasespace}
