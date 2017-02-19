@@ -1,14 +1,14 @@
 \section{Data Analysis}
 \label{sec:Analysis}
 In this work we perform a re-analyse of the scientific run~II data recorded between February 2011 and March 2012, 
-corresponding to 224.6~live~days. The characterization of \RanComment{the} detector response to ER interactions is performed using data from dedicated calibrations campaign with $^{60}$Co and $^{232}$Th radioactive sources \RanComment{Should we also mention calibration data is used also for background estimation???}, while for NR interactions data from $^{241}$AmBe calibration campaign are employed.
+corresponding to 224.6~live~days. The characterization of the detector response to ER interactions is performed using data from dedicated calibrations campaign with $^{60}$Co and $^{232}$Th radioactive sources, while for NR interactions data from $^{241}$AmBe calibration campaign are employed.
 %\sout{as well as for estimating the background from $\beta$ and $\gamma$-particles. For the ER sample we expose the detector to $^{60}$Co and $^{232}$Th sources, while for the NR sample we use $^{241}$AmBe.}
 
 
 This work extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, addressed in the following as the low energy channel , with a new study exploring the energy range between 43-240\,keV 
 %However we enlarge the energy range to be 3PE-180PE. In order to preform a blind analysis we divide our work into two energy ranges. Low energy , 3PE-30PE which is identical to the range in the works mentioned above, and a high energy range, 30PE-180PE. The main emphasis of this paper is the second region, on which no work has been done yet.
-The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in $cS1$ (lowE), the other optimized for high energies recoils
-ranging from 30-180\,PE in $cS1$\RanComment{cS1 ??} (highE), which are finally statistically combined. 
+The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in cS1 (lowE), the other optimized for high energies recoils
+ranging from 30-180\,PE in cS1 (highE), which are finally statistically combined. 
 The relative region of interests (ROI) of these two channels are shown in Figure~\ref{fig:phasespace} and further described in the following sections. 
 
 %\RanComment{Not sure this paper is so long we actually needs this full description, In any case I believe it is important to state the main new thing of this analysis which is the high energy part}
@@ -16,7 +16,6 @@ The relative region of interests (ROI) of these two channels are shown in Figure
 %for the low and high energy channels, reported in Section~\ref{subsec:LowE} and~\ref{subsubsec:HighE} respectively. 
 
 %This work focuses on the high energy channel, a brief description of the low evenrgy channel is reported in Section~\ref{subsec:LowE}.
-\RanComment{I think maybe we should explain the S2 bottom used (might go in signal model or here)}
 \input{lowEnergy}
 
 \subsection{High Energy}
@@ -26,7 +25,7 @@ The relative region of interests (ROI) of these two channels are shown in Figure
 %\subsection{Data Selections}
 %\label{subsec:AnalysisAndDataSelection}
 
-The data selection cuts which are defined to low energy \RanComment{Add run10 citation???} recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or simply extended to high energy depositions, however \sout{one cut is dropped and two are modified}. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. As a WIMP will interact only once in the detector we remove events whcih have more then one S2. we adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial presented in Figure~\ref{fig:Acc}
+The data selection cuts which are defined to low energy recoil only, are extended, modified or removed to be compatible with high energy recoils. Most of the cuts were fully compatible or simply extended to high energy depositions, however some required a more comprehansive study. In order to throw away peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III see ~\cite{xe100_run_combination}. As a WIMP will interact only once in the detector we remove events whcih have more then one S2. we adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window. In order to define the interaction exact location, we use several algorithms, one of the is the Neural Network (NN), as we do not train the detector using high ER events, the NN gives a large $\chi^2$ for these events. In order to not under estimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can fiducialize correctly for more details on all cuts see ~\cite{xe100_ana2012}. Finally the total acceptance is fitted using a 3rd order polynomial presented in Figure~\ref{fig:Acc}
 
 \begin{figure}[h!]
 \begin{minipage}{0.9\linewidth}
