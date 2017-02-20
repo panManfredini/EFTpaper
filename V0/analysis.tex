@@ -19,9 +19,8 @@ acceptance to low energy nuclear recoils.
 Most of these selection criteria (cuts) were fully compatible or simply extended to high energy depositions, however some required
 more comprehensive studies and are detailed in what follows. 
 
-To reject peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III, see ~\cite{xe100_run_combination}, \Ale{can't you just paste what's written there for this cut} \RanComment{suprisingly no it is not described there , so either we do not describe it as well or keep it like this.}. As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window \Ale{need to state what was before} \RanComment{instead of a linear dependace between the secon S2 size and the first one.}. To define the interaction's exact location, we use several algorithms, one of which is based on a Neural Network (NN)~\cite{Aprile:2012vw}. The NN was not trained to recognize high energy ER event and therefore \ale{not suitable for this analysis.} \Ale{This cut is based on the difference between NN and chisquare? Posreq?} 
-\sout{gives a large $\chi^2$ for them. In order to not underestimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can identify the exact location of interactions.} 
-\Ale{either we explain or not mention.}
+\RanComment{explain the s2width cut}
+To reject peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III, see ~\cite{xe100_run_combination}, \Ale{can't you just paste what's written there for this cut} \RanComment{suprisingly no it is not described there , so either we do not describe it as well or keep it like this.}. As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window instead of a linear dependace between the second S2 size and the first one. To define the interaction's exact location, we use several algorithms, one of which is based on a Neural Network (NN)~\cite{Aprile:2012vw}. The NN was not trained to recognize high energy ER events and therefore a cut on the NN score is not suitable for this analysis. We do keep other cuts on position reconstruction quality which are sufficient to ensure a correct position reconstruction. 
 
 The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibration data based on  the procedure described in~\cite{Aprile:2012vw} as a function of cS1
  and presented  in Figure~\ref{fig:Acc}, the total acceptance is fitted using a 3rd order polynomial.
@@ -35,7 +34,7 @@ The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibrati
 \end{figure}
 
 We define our signal region in the discrimination (y,cS1)-plane using $^{241}$AmBe calibration data. 
-The ROI is shown in Figure~\ref{fig:phasespace} as blue contour lines: the upper bound is defined such that it is not contaminated from contribution due to xenon excitation lines, the lower is defined as the 3\,$\sigma$ acceptance quantile of the $^241$AmBe distribution.
+The ROI is shown in Figure~\ref{fig:phasespace} as blue contour lines: the upper bound is defined such that it is not contaminated from contribution due to xenon excitation lines, the lower is defined as the 3\,$\sigma$ acceptance quantile of the $^{241}$AmBe distribution.
 
 We divide our signal region into two bands, they are constructed such that the $^{241}$AmBe data sample is equally distributed in y between them. The total number of events in a band is $\sim3000$ events. The bands are further divided into nine bins. The definition and content of the bins is presented in table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
 
@@ -43,13 +42,10 @@ We divide our signal region into two bands, they are constructed such that the $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
-The main source of background results from  ER leakage and hence, we estimate our background using $^{60}$Co and $^{232}$Th calibration samples 
-\sout{defining the distribution between the bins} \Ale{don't get it}. 
-Contribution from radiogenic and cosmogenic neutrons, \sout{and accidental coincidence}\RanComment{this is due to FV 34kg ???} \Ale{why remove Acc?} 
-are negligible for such a high energy recoil.
-For illustration purposes we report in Table~\ref{table:BinDef} the background expectation for each ROI bin along side with the observed data events. The background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is merely the ratio of observed data and calibration in an independent sideband. Note that in the background normalization is fitted to data during hypothesis testing, as described in section~\ref{section:stat}. 
+The main source of background results from  ER leakage and hence, we estimate the background distribution in the ROI using $^{60}$Co and $^{232}$Th calibration samples.  
+Contribution from radiogenic and cosmogenic neutrons, and accidental coincidence are negligible for such a high energy recoil.
+For illustration purposes we report in Table~ref{table:BinDef} the background expectation for each ROI bin along side with the observed data events. The background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is merely the ratio of observed data and calibration in an independent sideband. Note that in the background normalization is fitted to data during hypothesis testing, as described in section~\ref{section:stat}. 
 
-\Ale{Add at least a good sentence about determination of background uncertainty.} \RanComment{Isn't this explained in the stat part? you are talking about the systematic of 20\% or on statistical poisson?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -174,5 +170,5 @@ The expected recoil energy spectrum of each WIMP mass for each EFT operator is c
 
 \subsubsection{Inelastic WIMP Scattering}
 \label{subsubsec:Inelastic}
-
+\RanComment{We should add here the dependency of $v_{min}$ on $\delta$}
 To obtain recoil spectra for WIMP-nucleon scattering for all EFT operators with inelastic kinematics, we use a modified version of \texttt{DMFormFactor} provided by Barello et. al. \cite{InelasticMath}. Assumptions regarding the dark matter halo and nuclear physics are unchanged. The mass splitting $\delta$ between dark matter states is varied from 0 to \sout{1000} \RanComment{300} keV, \sout{well} beyond the value at which the predicted rate is zero for the entire mass range we consider (\RanComment{we see nothing above 250keV mass splitting}) \BenComment{perhaps I should see what number that actually is}.
