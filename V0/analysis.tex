@@ -17,11 +17,14 @@ The relative region of interests (ROI) of these two channels are shown in Figure
 This analysis channel explores high energy nuclear recoils and is the focus of this work. The data selection criteria described in detail in \cite{Aprile:2012vw} were optimized for high 
 acceptance to low energy nuclear recoils.
 Most of these selection criteria (cuts) were fully compatible or simply extended to high energy depositions, however some required
-more comprehensive studies and are detailed in what follows. To reject peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III, see ~\cite{xe100_run_combination}, \Ale{can't you just paste what's written there for this cut} \RanComment{suprisingly no it is not described there , so either we do not describe it as well or keep it like this.}. As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window \Ale{need to state what was before} \RanComment{instead of a linear dependace between the secon S2 size and the first one.}. To define the interaction's exact location, we use several algorithms, one of which is based on a Neural Network (NN)~\cite{Aprile:2012vw}. The NN was not trained to recognize high energy ER event and therefore \ale{not suitable for this analysis.} \Ale{This cut is based on the difference between NN and chisquare? Posreq?} 
+more comprehensive studies and are detailed in what follows. 
+
+To reject peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III, see ~\cite{xe100_run_combination}, \Ale{can't you just paste what's written there for this cut} \RanComment{suprisingly no it is not described there , so either we do not describe it as well or keep it like this.}. As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window \Ale{need to state what was before} \RanComment{instead of a linear dependace between the secon S2 size and the first one.}. To define the interaction's exact location, we use several algorithms, one of which is based on a Neural Network (NN)~\cite{Aprile:2012vw}. The NN was not trained to recognize high energy ER event and therefore \ale{not suitable for this analysis.} \Ale{This cut is based on the difference between NN and chisquare? Posreq?} 
 \sout{gives a large $\chi^2$ for them. In order to not underestimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can identify the exact location of interactions.} 
 \Ale{either we explain or not mention.}
- \ale{The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibration data based on  the procedure described in~\cite{Aprile:2012vw} as a function of cS1
- and presented  in Figure~\ref{fig:Acc}}, the total acceptance is fitted using a 3rd order polynomial.
+
+The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibration data based on  the procedure described in~\cite{Aprile:2012vw} as a function of cS1
+ and presented  in Figure~\ref{fig:Acc}, the total acceptance is fitted using a 3rd order polynomial.
 
 \begin{figure}[t!]
 \begin{minipage}{0.9\linewidth}
@@ -32,25 +35,21 @@ more comprehensive studies and are detailed in what follows. To reject peculiar 
 \end{figure}
 
 We define our signal region in the discrimination (y,cS1)-plane using $^{241}$AmBe calibration data. 
-\ale{The ROI is shown in Figure~\ref{fig:phasespace} as blue contour lines}: the upper bound is defined such that the \sout{ROI} 
-it is not contaminated from contribution due to xenon excitation lines, the lower is defined as the 3\,$\sigma$ acceptance quantile of the NR distribution,
-\sout{this is done for preventing gamma-X events to penetrate the sample.} \Ale{gamma-X is mega super jargon. If you wanna put the sentence explain they are
-anomalous multiple scatter events...}
+The ROI is shown in Figure~\ref{fig:phasespace} as blue contour lines: the upper bound is defined such that it is not contaminated from contribution due to xenon excitation lines, the lower is defined as the 3\,$\sigma$ acceptance quantile of the $^241$AmBe distribution.
 
-We divide our signal region into two bands \sout{ in y. The bands} \ale{, they} are constructed such that the \sout{NR} \ale{$^{241}$AmBe} data sample is equally distributed 
-\ale{in y} between them. The total number of events in a band is $\sim3000$ events. The bands are \ale{further} divided into nine bins. The definition and content of the bins is presented in table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
+We divide our signal region into two bands, they are constructed such that the $^{241}$AmBe data sample is equally distributed in y between them. The total number of events in a band is $\sim3000$ events. The bands are further divided into nine bins. The definition and content of the bins is presented in table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
-The main source of background results from  ER leakage and hence, we estimate our background using \ale{$^{60}$Co and $^{232}$Th} calibration samples 
+The main source of background results from  ER leakage and hence, we estimate our background using $^{60}$Co and $^{232}$Th calibration samples 
 \sout{defining the distribution between the bins} \Ale{don't get it}. 
 Contribution from radiogenic and cosmogenic neutrons, \sout{and accidental coincidence}\RanComment{this is due to FV 34kg ???} \Ale{why remove Acc?} 
 are negligible for such a high energy recoil.
-\ale{For illustration purposes we report in Table~\ref{table:BinDef} the background expectation for each ROI bin along side with the observed data events. The background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is merely the ratio of observed data and calibration in an independent sideband. Note that in the background normalization is fitted to data during hypotesis testing, as described in section~\ref{section:stat}.}
-\sout{For sensitivity estimation, we calculate a normalization factor in a sideband. For the final overall normalization, we let the scaling factor be a free parameter to best fit the data.} 
-\Ale{Add at least a good sentence about determination of background uncertainty.}
+For illustration purposes we report in Table~\ref{table:BinDef} the background expectation for each ROI bin along side with the observed data events. The background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is merely the ratio of observed data and calibration in an independent sideband. Note that in the background normalization is fitted to data during hypothesis testing, as described in section~\ref{section:stat}. 
+
+\Ale{Add at least a good sentence about determination of background uncertainty.} \RanComment{Isn't this explained in the stat part? you are talking about the systematic of 20\% or on statistical poisson?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -82,7 +81,7 @@ are negligible for such a high energy recoil.
 \end{tabular}
 }
 
-\caption{Bins definition. The estimated background event is calculated by taking the calibration sample and scaling it by $6.54\times10^{-3}$, which is the ratio of data and calibration in a sideband. \sout{The number of data events is the number of events from the DM data set in each bin.}\Ale{this is obvious, also do you really need the bin number coulumn? we don't us it anywhere}.}  \label{table:BinDef} 
+\caption{Bins definition. The estimated background event is calculated by taking the calibration sample and scaling it by $6.54\times10^{-3}$, which is the ratio of data and calibration in a sideband.\Ale{this is obvious, also do you really need the bin number coulumn? we don't us it anywhere}.}  \label{table:BinDef} 
 \end{table}
 
 
