@@ -1,7 +1,7 @@
 \section{Data Analysis}
 \label{sec:Analysis}
 In this work we re-analyze  scientific run~II data recorded between February 2011 and March 2012, 
-corresponding to 224.6~live~days. The characterization of the detector response to ER interactions is performed using dedicated calibration campaigns with $^{60}$Co and $^{232}$Th radioactive sources, while for the detector response to NR interaction $^{241}$AmBe calibration campaigns are performed.
+corresponding to 224.6~live~days. The characterization of the detector response to ER interactions is performed using dedicated calibration campaigns with $^{60}$Co and $^{232}$Th radioactive sources, while for the detector response to NR interactions $^{241}$AmBe calibration campaigns are performed.
 %\sout{as well as for estimating the background from $\beta$ and $\gamma$-particles. For the ER sample we expose the detector to $^{60}$Co and $^{232}$Th sources, while for the NR sample we use $^{241}$AmBe.}
 
  
@@ -14,12 +14,10 @@ The relative region of interests (ROI) of these two channels are shown in Figure
 
 \subsection{High Energy}
 \label{subsubsec:HighE}
-\ale{This analysis channel explores high energy nuclear recoils and is the focus of this work.}
-The data selection criteria \sout{defined to low energy recoil only, are extended, modified or removed to be compatible with high energy recoils.} 
-\ale{described in detail in \cite{Aprile:2012vw} were optimized for high 
-acceptance to low energy nuclear recoils.}
-Most of \sout{the} \ale{these} selection criteria (cuts) were fully compatible or simply extended to high energy depositions, however some required
-more comprehensive studies \ale{and are detailed in what follows}. To reject peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III, see ~\cite{xe100_run_combination}, \Ale{can't you just paste what's written there for this cut}. As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window \Ale{need to state what was before}. To define the interaction's exact location, we use several algorithms, one of which is based on a Neural Network (NN)~\cite{Aprile:2012vw}. The NN was not trained to recognize high energy ER event and therefore \ale{not suitable for this analysis.} \Ale{This cut is based on the difference between NN and chisquare? Posreq?} 
+This analysis channel explores high energy nuclear recoils and is the focus of this work. The data selection criteria described in detail in \cite{Aprile:2012vw} were optimized for high 
+acceptance to low energy nuclear recoils.
+Most of these selection criteria (cuts) were fully compatible or simply extended to high energy depositions, however some required
+more comprehensive studies and are detailed in what follows. To reject peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III, see ~\cite{xe100_run_combination}, \Ale{can't you just paste what's written there for this cut} \RanComment{suprisingly no it is not described there , so either we do not describe it as well or keep it like this.}. As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt here a cut that is more suitable to higher energies and demands a single S2 in a 160 $\mu$S window \Ale{need to state what was before} \RanComment{instead of a linear dependace between the secon S2 size and the first one.}. To define the interaction's exact location, we use several algorithms, one of which is based on a Neural Network (NN)~\cite{Aprile:2012vw}. The NN was not trained to recognize high energy ER event and therefore \ale{not suitable for this analysis.} \Ale{This cut is based on the difference between NN and chisquare? Posreq?} 
 \sout{gives a large $\chi^2$ for them. In order to not underestimate the background we drop this cut. We do keep other cuts on position reconstruction to make sure we can identify the exact location of interactions.} 
 \Ale{either we explain or not mention.}
  \ale{The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibration data based on  the procedure described in~\cite{Aprile:2012vw} as a function of cS1
@@ -34,7 +32,7 @@ more comprehensive studies \ale{and are detailed in what follows}. To reject pec
 \end{figure}
 
 We define our signal region in the discrimination (y,cS1)-plane using $^{241}$AmBe calibration data. 
-\ale{The ROI is shown in Figure~\ref{fig:phasespace} as blu contour lines}: the upper bound is defined such that the \sout{ROI} 
+\ale{The ROI is shown in Figure~\ref{fig:phasespace} as blue contour lines}: the upper bound is defined such that the \sout{ROI} 
 it is not contaminated from contribution due to xenon excitation lines, the lower is defined as the 3\,$\sigma$ acceptance quantile of the NR distribution,
 \sout{this is done for preventing gamma-X events to penetrate the sample.} \Ale{gamma-X is mega super jargon. If you wanna put the sentence explain they are
 anomalous multiple scatter events...}
