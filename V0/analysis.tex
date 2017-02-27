@@ -88,7 +88,8 @@ For illustration purposes we report in Table~\ref{table:BinDef} the background e
 
 \begin{figure}[]
 \begin{minipage}{1\linewidth}
-\centerline{\includegraphics[width=1\linewidth]{Figures/eft_sr.eps}}
+%\centerline{\includegraphics[width=1\linewidth]{Figures/eft_sr.eps}}
+\BenComment{***IMAGE BROKEN***}
 \end{minipage}
 \caption{$^{60}\mathrm{Co}$ and $^{232}\mathrm{Th}$ data in light gray and DM data in black dots. The red line is the threshold between the lowE part and the highE one. In blue are the bands. For lowE constructed using data from a 50 GeV/$c^2$ WIMP. For the highE region the 9 bins are presented. top left is bin number 1,  top right is bin number 6, bottom left is bin number 7 and bottom right is bin number 9.}
 \label{fig:phasespace}
@@ -99,7 +100,7 @@ For illustration purposes we report in Table~\ref{table:BinDef} the background e
 
 \subsection{Signal Model}
 \label{subsec:SignalModel}
-In summary, the signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{xe100_ana2012} \RanComment{adopting the modification stated above,} to obtain the expected event rate in the detector in terms of detector variables (i.e. cS1,cS2). We now discuss details of the signal models. In order to calculate the expected value of the signal in cS1, we use Eq.~\ref{eq:LeffEnergyScale} for both energy regions, 
+The signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{xe100_ana2012} (with modifications as stated above) to obtain the expected event rate in the detector in terms of detector variables (i.e. cS1,cS2). In order to calculate the expected value of the signal in cS1, we use Eq.~\ref{eq:LeffEnergyScale} for both energy regions, 
 \begin{equation}
 \label{eq:LeffEnergyScale}
 	\langle cS1 \rangle = E_{\mathrm{nr}} \cdot (\Ly \Leff) \cdot   \left(\frac{S_{nr}}{S_{ee}}\right) 
@@ -125,14 +126,25 @@ In summary, the signal model is produced by taking a theoretical event rate spec
 %\mu_Q(E) &\approx Q_y(E) \cdot E
 %\end{align}
 
-where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the light yield, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_{ee}$ and $S_{nr}$ are the quenching factors for ER and NR respectively. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters and the construction of the signal PDF please see \cite{xe100_ana2012,xe100_run_combination}. For the lowE region, the expected cS2 signal can be calculated as well~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
+where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the light yield, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_{ee}$ and $S_{nr}$ are the quenching factors for ER and NR respectively. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters and the construction of the signal PDF please see \cite{xe100_ana2012,xe100_run_combination}. 
+
+For the lowE region, the expected cS2 signal can be calculated as well~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
 %
 \begin{equation}
 \label{eq:Qy}
 	\langle cS2_{bottom} \rangle = E_{\mathrm{nr}}\Qy Y   
 \end{equation}
 %
-where $Y = 8.4366$ is the amplification factor determined from the detector response to single electrons~\cite{XenonSingleElectron}, and $\Qy$ is the charge yield as a function of $E_\mathrm{nr}$. Note that as some of the top PMTs saturate we use only the bottom PMT for energy scale in S2. \BenComment{Need to mention $\sigma_Y = 6.93$ but I can't figure out how without the signal pdf equation, and I cannot find this parameter in any other XENON papers.} Applying the detector and PMT responses, and the acceptance as in \cite{xe100_run_combination}, defines the lowE signal model over the region $3 \mathrm{PE} < \cSi < 30 \mathrm{PE}$, with $\cSiib > 73.5 \mathrm{PE}$.
+where $Y = 8.4366$ is the amplification factor determined from the detector response to single electrons~\cite{XenonSingleElectron}, and $\Qy$ is the charge yield as a function of $E_\mathrm{nr}$. Note that as some of the top PMTs saturate we use only the bottom PMT for energy scale in S2. Applying the detector and PMT responses, and the acceptance as in \cite{xe100_run_combination}, defines the lowE signal model over the region $3 \mathrm{PE} < \cSi < 30 \mathrm{PE}$, with $\cSiib > 73.5 \mathrm{PE}$.
+
+Eq. \ref{eq:Qy} hides a small subtlety. The actual $cS2_{bottom}$ PDF is composed of two pieces, a Poisson term associated with the initial charge liberation and a Gaussian term associated with the PMT response and other detector effects:
+%
+\begin{equation}
+\label{eq.cS2pdf}
+p_\mathrm{S2}(\mathrm{\cSiib}|E) = \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
+\end{equation}
+%
+where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges, which are unmeasured and thus summed over. The amplification factor $Y$ is applied on the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$. 
 
 For the high energy region we can not produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough recoil energies. We therefore use the NR calibration data distribution in log($\mathrm{cS2_b/cS1}$) to estimate the WIMP one. Above 180PE in \cSi\ the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately so this forms the higher bound of this analysis. With the \cSiib\ distribution determined by this empirical method we require only a prediction of the \cSi\ distribution. This is obtain from Eq. \ref{eq:LeffEnergyScale}, followed by the application of detector and PMT responses, as well as the acceptance given in~\ref{fig:Acc}, which completes the highE signal model definition.
 
@@ -163,9 +175,9 @@ Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and
 %  \frac{\mathrm{d} R}{\mathrm{d}\cSi} = \epsilon_\mathrm{S1}(\cSi) \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.\epsilon_\mathrm{S2'}(E).p_\mathrm{S1}(\mathrm{\cSi}|E) \, \mathrm{d}E
 %\end{multline}
 
-\sout{
-where $p_\mathrm{S1}(\mathrm{\cSi}|E)$ is computed as in Eq. \ref{eq:S1S2pdf}. The S1 acceptance $\epsilon_\mathrm{S1}(\cSi)$ is given in Fig. \ref{fig:Acc}, and the S2 acceptance $\epsilon_\mathrm{S2'}(E)$ is negligibly different from one over the signal region $30 \mathrm{PE} < \cSi < 180 \mathrm{PE}$.
-}
+%\sout{
+%where $p_\mathrm{S1}(\mathrm{\cSi}|E)$ is computed as in Eq. \ref{eq:S1S2pdf}. The S1 acceptance $\epsilon_\mathrm{S1}(\cSi)$ is given in Fig. \ref{fig:Acc}, and the S2 acceptance $\epsilon_\mathrm{S2'}(E)$ is negligibly different from one over the signal region $30 \mathrm{PE} < \cSi < 180 \mathrm{PE}$.
+%}
 \subsubsection{Elastic Scattering}
 \label{subsubsec:Elastic}
 
