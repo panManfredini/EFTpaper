@@ -33,44 +33,23 @@ Details of how to extract and use the provided $G'$ functions are given in the e
 \label{fig:smeartable_highE}
 \end{figure}  
 
+\begin{figure}
+{
+
+  \lstset{tabsize=4,basicstyle=\tiny\ttfamily,columns=flexible,emptylines=10000}
+  \lstinputlisting{smeartable_Leff-1.dat}
+}
+\caption{Detector response table using $\Leff$ with constrained scaling parameter set to $-1\sigma$ value. First column gives recoil energies, subsequent columns give the values of $G'_i(E)$ for each of the 9 high E analysis bins. The sampling is in steps of 10 keV, which is too coarse to give an accurate signal model for very low WIMP masses, but is suitable for the mass range most relevant to our analysis. Higher resolution $G'_i(E)$ functions, and $G'_i(E)$ functions for other values of $\Leff$, are given in supplementary material\BenComment(give URL). 
+\label{tab:smeartable_highE}
+}
+\end{figure}  
+
 \subsection{Example code}
 \label{app:example_code}
 \begin{lstlisting}
-import ROOT
-import h5py
 import numpy as np
+from numpy import newaxis
 from scipy.interpolate import interp1d
-
-# Test dR/dE
-drde_dir = "/home/farmer/repos/EFTtools/recoil_spectrum_tables/XeComb"
-fnamehigh = "{0}/IDM_XeComb_NR_highE_c6p=c6n.h5".format(drde_dir)
-f_dRdE_high = h5py.File(fnamehigh,'r')
-dath = f_dRdE_high["delm0"][:].T
-Erh, dRdEh = dath[0], dath[17] # first column is El, rest contain dRdE for each mass (1 TeV selected)
-# Rate is for coupling squared of 1; let us rescale it to a value near the limit (1e3)
-# Also have to correct the exposure from benchmark
-# value of 7800 kg.days
-dRdEh = dRdEh * (1e3/1.) * 224.6*34. / 7800.
-
-# Smearing table root file
-datadir = "recorded_results/fixed_Er3keV_cut_LE+HE_smeartable2"
-fsmear = "{0}/SmearTables.root".format(datadir)
-
-def get_table(rootfile,objname):
-    """Extract 2D ROOT histogram from file""" 
-    f = ROOT.TFile(rootfile, 'r')
-    h = f.Get(objname)
-    h.SetDirectory(0)
-    Nx = h.GetNbinsX()
-    Ny = h.GetNbinsY()
-    # Get arrays of bin edges
-    x = np.array([h.GetXaxis().GetBinLowEdge(i+1) for i in range(Nx+1)])
-    y = np.array([h.GetYaxis().GetBinLowEdge(j+1) for j in range(Ny+1)])
-    Z = np.zeros((Nx,Ny))
-    for i in range(Nx):
-        for j in range(Ny):
-            Z[i,j] = h.GetBinContent(i+1,j+1)
-    return x, y, Z
 
 def TrapI(x,y):
     """Simple trapezoid integration"""
@@ -78,23 +57,25 @@ def TrapI(x,y):
     h = (y[1:] + y[:-1])/2.
     return np.sum(w*h,axis=0)
 
-def get_signal_model(Er,dRdE,G,E):
-    """Function for computing a signal model based on 2D smearing tables.
-    Need to align dRdE samples with Gl samples, or vice-versa, in order to do the integration
-    Easiest to interpolate the dRdE onto the Gl samples I think.
-    Er, dRdE - theoretical recoil spectrum
-    G - smearing table to use
-    E - sampled recoil energy values in G"""
-    f_dRdE = interp1d(Er,dRdE,bounds_error=False,fill_value=0) # assume spectrum is zero outside supplied data range
-    dRdE_matched = f_dRdE(E)
-    dRdcS1 = TrapI(E[:,np.newaxis],G*dRdE_matched[:,np.newaxis])
-    return dRdcS1
+# Load detector response table
+data = np.loadtxt("detector_table.dat")
+E = data[:,0]; Gi = data[:,1:]
 
-# Note; pdf values in bins are associated with the LOWER bin edge value
-Eh, cS1h, Gh = get_table(fsmear,"th2f_Leff-1.0000_highSR_binned")
-dR_htab = get_signal_model(Erh,dRdEh,Gh,Eh[:-1]) 
+# Load test recoil spectrum (1 TeV WIMP, O6)
+data = np.loadtxt("O6_1TeV.dat")
+Er = data[:,0]
+# Input spectra is normalised to coupling^2=1,
+# rescale to something near limit (1e3)
+# Also multiply in the appropriate exposure
+dRdE = data[:,1] * (1e3/1.) * 224.6*34.
 
-for i,R in enumerate(dR_htab):
+# Interpolate recoil spectrum to table values
+# Assume spectrum zero outside data given
+f_dRdE = interp1d(Er,dRdE)
+dRdE_matched = f_dRdE(E)
+Ri = TrapI(E[:,newaxis],Gi*dRdE_matched[:,newaxis])
+
+for i,R in enumerate(Ri):
   print "bin {0}: rate = {1:.2g}".format(i+1,R)
 \end{lstlisting}
 
@@ -112,8 +93,5 @@ bin 8: rate = 0.47
 bin 9: rate = 0.84
 \end{lstlisting}
 
-% \begin{figure}
-% \VerbatimInput{smeartable_Leff-1.dat}
-% \label{tab:smeartable_highE}
-% \end{figure}  
+\vfill
 
