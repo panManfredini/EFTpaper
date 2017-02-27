@@ -6,7 +6,7 @@
 
 %\RequirePackage{lineno}
 \documentclass[twocolumn, showpacs, showkeys, amsmath, amssymb, amsfonts, floatfix, linenumbers]{revtex4-1} 
-\usepackage[colorlinks=true, citecolor=green, filecolor=blue, linkcolor=blue, urlcolor=blue]{hyperref}
+\usepackage[colorlinks=true, citecolor=green, filecolor=blue, linkcolor=blue, urlcolor=blue, pdfencoding=auto]{hyperref}
 %\usepackage{amsfonts}
 \usepackage{color}
 \usepackage{placeins} % floatbarrier definition
@@ -37,6 +37,7 @@
 % For rendering code example in appendix
 \usepackage{listings}
 \usepackage{color}
+\usepackage{fancyvrb}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -50,7 +51,7 @@
   columns=flexible,
   basicstyle={\small\ttfamily},
   numbers=none,
-  numberstyle=\tiny\color{gray},
+  %numberstyle=\tiny\color{gray},
   keywordstyle=\color{blue},
   commentstyle=\color{dkgreen},
   stringstyle=\color{mauve},
