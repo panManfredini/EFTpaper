@@ -46,9 +46,11 @@ drde_dir = "/home/farmer/repos/EFTtools/recoil_spectrum_tables/XeComb"
 fnamehigh = "{0}/IDM_XeComb_NR_highE_c6p=c6n.h5".format(drde_dir)
 f_dRdE_high = h5py.File(fnamehigh,'r')
 dath = f_dRdE_high["delm0"][:].T
-Erh, dRdEh = dath[0], dath[10] # first column is El, rest contain dRdE for each mass (50 GeV selected)
-# Rate is for coupling of 1; let us rescale it to a value near the limit (1e3)
-dRdEh = dRdEh * (1e3/1.)**2
+Erh, dRdEh = dath[0], dath[17] # first column is El, rest contain dRdE for each mass (1 TeV selected)
+# Rate is for coupling squared of 1; let us rescale it to a value near the limit (1e3)
+# Also have to correct the exposure from benchmark
+# value of 7800 kg.days
+dRdEh = dRdEh * (1e3/1.) * 224.6*34. / 7800.
 
 # Smearing table root file
 datadir = "recorded_results/fixed_Er3keV_cut_LE+HE_smeartable2"
@@ -99,13 +101,13 @@ for i,R in enumerate(dR_htab):
 Output:
 
 \begin{lstlisting}
-bin 1: rate = 42
-bin 2: rate = 15
-bin 3: rate = 4.8
-bin 4: rate = 0.0057
-bin 5: rate = 4e-10
-bin 6: rate = 8.3e-18
-bin 7: rate = 56
-bin 8: rate = 4.8
-bin 9: rate = 0.00021
+bin 1: rate = 0.081
+bin 2: rate = 0.098
+bin 3: rate = 0.35
+bin 4: rate = 0.46
+bin 5: rate = 0.29
+bin 6: rate = 0.22
+bin 7: rate = 0.18
+bin 8: rate = 0.47
+bin 9: rate = 0.84
 \end{lstlisting}
