@@ -184,5 +184,11 @@ The expected recoil energy spectrum of each WIMP mass for each EFT operator is c
 
 \subsubsection{Inelastic WIMP Scattering}
 \label{subsubsec:Inelastic}
-\RanComment{We should add here the dependency of $v_{min}$ on $\delta$}
-To obtain recoil spectra for WIMP-nucleon scattering for all EFT operators with inelastic kinematics, we use a modified version of \texttt{DMFormFactor} provided by Barello et. al. \cite{InelasticMath}. Assumptions regarding the dark matter halo and nuclear physics are unchanged. The mass splitting $\delta$ between dark matter states is varied from 0 to \sout{1000} \RanComment{300} keV, \sout{well} beyond the value at which the predicted rate is zero for the entire mass range we consider (\RanComment{we see nothing above 250keV mass splitting}) \BenComment{perhaps I should see what number that actually is}.
+To obtain recoil spectra for WIMP-nucleon scattering for all EFT operators with inelastic kinematics, we use a modified version of \texttt{DMFormFactor} provided by Barello et. al. \cite{InelasticMath}. The authors have modified the original package to enforce the new energy conservation condition $\delta_m + \vec{v}\cdot\vec{q} + \left|\vec{q}\right|^2/2\mu_N = 0$, primarily by replacing 
+$\vec{v}^\perp_{elastic} \rightarrow \vec{v}^\perp_{inelastic} = \vec{v}^\perp_{elastic} +\frac{\delta_m}{\vert{\vec{q}}\vert^2}\vec{q}$ in the definitions of the EFT and nuclear operators, giving rise to the well-known minimum velocity for scattering
+\begin{equation}
+  v_\mathrm{min} = \frac{1}{\sqrt{2 m_N E_R}} \left|\frac{m_N E_R}{\mu_N} + \delta_m\right|
+\end{equation}
+where $\mu_N$ is the WIMP-nucleon reduced mass.
+
+Assumptions regarding the dark matter halo and nuclear physics are unchanged. The mass splitting $\delta_m$ between dark matter states is varied from 0 to 300 keV, safely beyond the value at which the predicted rate is zero for the entire mass range we consider.
