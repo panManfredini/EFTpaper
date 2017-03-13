@@ -1,6 +1,15 @@
+\section{Data from energy up to 1000PE}
+This analysis discuss recoil energies up to 240\,keV (180\,PE) due to low statistics in calibration of NRs. For completeness the data of energy recoils of up to 1000\,PE is presented in Fig~\ref{fig:eft_1000}. The quality selection criteria applied are the same as for the highE region.
+
+\begin{figure}
+\centerline{\includegraphics[width=1.\linewidth]{Figures/eft_1000.eps}}
+\caption{In blue, ER calibration sample ($^{60}$Co and $^{232}$Th). In black Dark Matter data sample. The two large populations in ~350\,PE and ~500\,PE are the 110\,keV and 197\,keV excitation lines of $^{19}F$ coming from the PTFE and occurring at the outskirts of the FV. }
+\label{fig:eft_1000}
+\end{figure}  
+
 \section{Signal model detector response table}
 
-In this appendix we describe digital tables which can be used to construct an accurate signal model for this analysis given any input recoil spectrum $\mathrm{d}R/\mathrm{d}E$. A visualisation of the tables is shown in Fig. \ref{fig:smeartable_highE}, and in section \ref{app:example_code} we show a simple example of how to use the supplied tables in Python. Currently we provide these tables only for the high E analysis region.
+In this appendix we describe digital tables which can be used to construct an accurate signal model for this analysis given any input recoil spectrum $\mathrm{d}R/\mathrm{d}E$. A visualization of the tables is shown in Fig. \ref{fig:smeartable_highE}, and in section \ref{app:example_code} we show a simple example of how to use the supplied tables in Python. Currently we provide these tables only for the high E analysis region.
 
 The signal model for the high E analysis region can be expressed analytically in the form:
 %
@@ -94,4 +103,3 @@ bin 9: rate = 0.84
 \end{lstlisting}
 
 \vfill
-
