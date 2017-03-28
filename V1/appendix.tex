@@ -33,7 +33,7 @@ With some simple rearrangement this rate can be written in terms of an integral 
  &= \int\frac{\mathrm{d} R}{\mathrm{d}E} G'_i(E) \mathrm{d}E
 \end{align}
 %
-where in the last line we absorb the factor of $1/2$ into the definition of $G'_i$. We see here that the signal rate for each bin can be expressed as an integral over the recoil spectrum times a detector response function $G'_i$ for that bin. It is these detector response functions which are shown in Fig. \ref{fig:smeartable_highE}, and which we provide digitally for use by the community. With these tables it is simple to produce a signal model for our analysis for any input theoretical recoil spectrum. The functions $G'_i$ are provided for three values of the nuisance variable $\Leff$, namely the median value and values at $\pm 1 \sigma$ in $\Leff$. From these, along with the measured background rates given in table \ref{table:BinDef}, one may construct a likelihood which accounts for uncertanities in $\Leff$, however simply using the $-1\sigma$ value produces quite an accurate prediction and is generally conservative.
+where in the last line we absorb the factor of $1/2$ into the definition of $G'_i$. We see here that the signal rate for each bin can be expressed as an integral over the recoil spectrum times a detector response function $G'_i$ for that bin. It is these detector response functions which are shown in Fig. \ref{fig:smeartable_highE}, and which we provide digitally for use by the community (a low-resolution example is given in Table \ref{tab:smeartable_highE}). With these tables it is simple to produce a signal model for our analysis for any input theoretical recoil spectrum. The functions $G'_i$ are provided for three values of the nuisance variable $\Leff$, namely the median value and values at $\pm 1 \sigma$ in $\Leff$. From these, along with the measured background rates given in table \ref{table:BinDef}, one may construct a likelihood which accounts for uncertanities in $\Leff$, however simply using the $-1\sigma$ value produces quite an accurate prediction and is generally conservative.
 
 Details of how to extract and use the provided $G'$ functions are given in the example of section \ref{app:example_code}. 
 
@@ -43,17 +43,16 @@ Details of how to extract and use the provided $G'$ functions are given in the e
 \label{fig:smeartable_highE}
 \end{figure}  
 
-\begin{figure}
+\begin{table}
 {
-
-  \lstset{tabsize=4,basicstyle=\tiny\ttfamily,columns=flexible,emptylines=10000}
+  \lstset{tabsize=4,basicstyle=\tiny\ttfamily,columns=flexible,emptylines=10000,keepspaces=true}
   \lstinputlisting{smeartable_Leff-1.dat}
 }
-\caption{Detector response table using $\Leff$ with constrained scaling parameter set to $-1\sigma$ value. First column gives recoil energies, subsequent columns give the values of $G'_i(E)$ for each of the 9 high E analysis bins. The sampling is in steps of 10 keV, which is too coarse to give an accurate signal model for very low WIMP masses, but is suitable for the mass range most relevant to our analysis. Higher resolution $G'_i(E)$ functions, and $G'_i(E)$ functions for other values of $\Leff$, are given in supplementary material\BenComment(give URL). 
+\caption{Detector response table using $\Leff$ with constrained scaling parameter set to $-1\sigma$ value. First column gives recoil energies, subsequent columns give the values of $G'_i(E)$ for each of the 9 high E analysis bins. The sampling is in steps of 10 keV, which is too coarse to give an accurate signal model for very low WIMP masses, but is suitable for the mass range most relevant to our analysis. Higher resolution $G'_i(E)$ functions, and $G'_i(E)$ functions for other values of $\Leff$, are given in supplementary material \BenComment{give URL}. 
 \label{tab:smeartable_highE}
 }
-\end{figure}  
-\newpage
+\end{table}  
+%\newpage
 \subsection{Example code}
 \label{app:example_code}
 \begin{lstlisting}
@@ -103,5 +102,5 @@ bin 8: rate = 0.47
 bin 9: rate = 0.84
 \end{lstlisting}
 
-\vfill
+%\vfill
 
