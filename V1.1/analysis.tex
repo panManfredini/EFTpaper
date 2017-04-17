@@ -20,7 +20,7 @@ Most of these selection criteria (cuts) were found to be fully compatible with (
 
 %very nice!
 The width of an S2 pulse increases with the depth (z) of the interaction. This is due to the diffusion of the electron cloud during its propagation
-towards the gate grid. Low energy S2 events show larger spread
+through the liquid xenon. Low energy S2 events show larger spread
 due to low statistics of drifted ionization electrons, hence
 the cut was previously defined in an energy-dependent way. However for recoil energies which are high enough, as in this channel, this energy dependency is not valid. We therefore use here a cut on the S2 width which is a function of the depth of the interaction alone. 
 %\textbf{I can add a comment stating that the main differance is that we set S2sTot[0] =  5000 for any value above 5000, but I think it is not needed.}}
@@ -36,7 +36,7 @@ The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibrati
 \begin{minipage}{0.9\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/Acceptance.eps}}
 \end{minipage}
-\caption{The total acceptance of all cuts used. Data from calibration is shown in black, with a polynomial fit in red.}
+\caption{The total acceptance of all cuts used. Data from calibration is shown in black, with a 3rd order polynomial fit in red.}
 \label{fig:Acc}
 \end{figure}
 
@@ -50,7 +50,7 @@ We divide our signal region into two bands, constructed such that the $^{241}$Am
 
 %%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
 The main source of background results from ER leakage, therefore we estimate the background distribution in the ROI using $^{60}$Co and $^{232}$Th calibration samples.  
-Contributions from radiogenic and cosmogenic neutrons, and accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, as described in section~\ref{sec:LikelihoodFunction}. 
+Contributions from radiogenic and cosmogenic neutrons, and accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, \RanComment{rather then using the sideband normalization}, as described in section~\ref{sec:LikelihoodFunction}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -119,7 +119,7 @@ The signal model is produced by taking a theoretical event rate spectrum, the pr
 %\mu_Q(E) &\approx Q_y(E) \cdot E
 %\end{align}
 
-where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the detector related light yield, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_{ee}$ and $S_{nr}$ are the quenching factors for ER and NR respectively. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28 \pm 0.04$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters and the construction of the signal PDF please see \cite{Aprile:2012vw,xe100_run_combination}. 
+where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the average light yield in the detector, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_{ee}$ and $S_{nr}$ are the quenching factors due to the externally applied electric field. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28 \pm 0.04$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters and the construction of the signal PDF please see \cite{Aprile:2012vw,xe100_run_combination}. 
 
 The expected cS2 signal is computed following~\cite{DataMCXenon} using Eq.~\ref{eq:Qy} for the lowE region only,
 %For the lowE region, the expected cS2 signal can be calculated as well~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
@@ -131,7 +131,7 @@ The expected cS2 signal is computed following~\cite{DataMCXenon} using Eq.~\ref{
 %
 %where $Y = 8.4366$   %where did you thake this number??
 where $Y = 8.27 \pm 0.26$ 
-is the amplification factor determined from the detector response to single electrons~\cite{XenonSingleElectron}, and $\Qy$ is the charge yield as a function of $E_\mathrm{nr}$. Applying the detector and PMT responses, and the acceptance as in \cite{xe100_run_combination}, defines the lowE signal model over the region $3 \mathrm{PE} < \cSi < 30 \mathrm{PE}$, with $\cSiib > 73.5 \mathrm{PE}$.
+is the amplification factor determined from the detector response to single electrons~\cite{XenonSingleElectron}, and $\Qy$ is the charge yield as a function of $E_\mathrm{nr}$. Applying the detector and PMT responses, and the acceptance as in \cite{xe100_run_combination}, defines the lowE signal model over the region $3 \mathrm{PE} < \cSi < 30 \mathrm{PE}$, with $\cSiib > 73.5 \mathrm{PE}$ as the S2 threshold.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THIS PART IS NOT NEEDED  Ale votes for removal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Eq. \ref{eq:Qy} hides a small subtlety. The actual $cS2_{bottom}$ PDF is composed of two pieces, a Poisson term associated with the initial charge liberation and a Gaussian term associated with the PMT response and other detector effects:
@@ -141,10 +141,10 @@ Eq. \ref{eq:Qy} hides a small subtlety. The actual $cS2_{bottom}$ PDF is compose
 p_\mathrm{S2}(\mathrm{\cSiib}|E) = \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
 \end{equation}
 %
-where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges, which are unmeasured and thus summed over. The amplification factor $Y$ is applied on the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$. 
+where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges, which are unmeasured and thus summed over. The amplification factor $Y$ is applied on the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$ \RanComment{as measured and described in~\cite{XenonSingleElectron}}. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For the high energy region we can not produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough recoil energies. We therefore use the NR calibration data distribution in log($\mathrm{cS2_b/cS1}$) to estimate the WIMP one. Above 180PE in \cSi\ the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately so this forms the higher bound of this analysis. With the \cSiib\ distribution determined by this empirical method we require only a prediction of the \cSi\ distribution. This is obtain from Eq. \ref{eq:LeffEnergyScale}, followed by the application of detector and PMT responses, as well as the acceptance given in~\ref{fig:Acc}, which completes the highE signal model definition.
+For the high energy region we cannot produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough recoil energies. We therefore use the NR calibration data distribution in log($\mathrm{cS2_b/cS1}$) to estimate the WIMP one. Above 180PE in \cSi\ the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately so this forms the higher bound of this analysis. With the \cSiib\ distribution determined by this empirical method we require only a prediction of the \cSi\ distribution. This is obtained from Equation (\ref{eq:LeffEnergyScale}), followed by the application of detector and PMT responses, as well as the acceptance given in Figure~\ref{fig:Acc}, which completes the highE signal model definition.
 
 Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (lowE and highE).
 
@@ -160,7 +160,7 @@ Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and
 \begin{minipage}{1.\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/SigLowO1O6.eps}}
 \end{minipage}
-\caption{The expected signal in the low energy region for a 300 GeV/$c^2$ WIMP mass, Normalized to 5 events. Left(right) is the spectra for $\mathcal{O}_1$($\mathcal{O}_6$). Notice that for $\mathcal{O}_1$ most of the events are expected to deposit energy lower then 30 PE whereas for $\mathcal{O}_6$ a large fraction of the events do not appear in this region at all. The black lines indicate the bands constructed on this specific event rate, and are dividing the signal into 8 equally distributed signal sub-regions.}
+\caption{The expected signal in the low energy region for a 300 GeV/$c^2$ WIMP mass, Normalized to 5 events. Left(right) is the spectra for $\mathcal{O}_1$($\mathcal{O}_6$). Notice that for $\mathcal{O}_1$ most of the events are expected to deposit energy lower then 30 PE whereas for $\mathcal{O}_6$ a large fraction of the events do not appear in this region at all. The black lines indicate the bands constructed on these specific mass and operator models, and are dividing the signal into 8 equally distributed signal sub-regions. \RanComment{This parameter space can be mapped with a one to one mapping to the y-cS1 one.}}
 \label{fig:LowE}
 \end{figure}
 
@@ -186,7 +186,7 @@ The expected recoil energy spectrum of each WIMP mass for each EFT operator is c
 To obtain recoil spectra for WIMP-nucleon scattering for all EFT operators with inelastic kinematics, we use a modified version of \texttt{DMFormFactor} provided by Barello et. al. \cite{InelasticMath}. The authors have modified the original package to enforce the new energy conservation condition $\delta_m + \vec{v}\cdot\vec{q} + \left|\vec{q}\right|^2/2\mu_N = 0$, primarily by replacing 
 $\vec{v}^\perp_{elastic} \rightarrow \vec{v}^\perp_{inelastic} = \vec{v}^\perp_{elastic} +\frac{\delta_m}{\vert{\vec{q}}\vert^2}\vec{q}$ in the definitions of the EFT and nuclear operators, giving rise to the well-known minimum velocity for scattering
 \begin{equation}
-  v_\mathrm{min} = \frac{1}{\sqrt{2 m_N E_R}} \left|\frac{m_N E_R}{\mu_N} + \delta_m\right|
+  v_\mathrm{min}/c = \frac{1}{\sqrt{2 m_N E_R}} \left|\frac{m_N E_R}{\mu_N} + \delta_m\right|
 \end{equation}
 where $\mu_N$ is the WIMP-nucleon reduced mass.
 
