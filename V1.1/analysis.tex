@@ -8,8 +8,6 @@ corresponding to 224.6~live~days. The characterization of the detector response 
 This work extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, referred to in the following as the low energy channel, with a new study exploring the recoil energy range between 43-240\,keV. 
 The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30\,PE in cS1 (lowE), 
 the other optimized for high energies recoils ranging from 30-180\,PE in cS1 (highE).  These two analysis are then statistically combined. 
-\sout{The regions of interests (ROI) in these two channels, in which we search for dark matter events, are shown in Figure~\ref{fig:phasespace} and further described in the following sections.} 
-
 \input{lowEnergy}
 
 \subsection{High Energy}
@@ -50,7 +48,7 @@ We divide our signal region into two bands, constructed such that the $^{241}$Am
 
 %%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
 The main source of background results from ER leakage, therefore we estimate the background distribution in the ROI using $^{60}$Co and $^{232}$Th calibration samples.  
-Contributions from radiogenic and cosmogenic neutrons, and accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, \RanComment{rather then using the sideband normalization}, as described in section~\ref{sec:LikelihoodFunction}. 
+Contributions from radiogenic and cosmogenic neutrons, and accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, rather then using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -141,7 +139,7 @@ Eq. \ref{eq:Qy} hides a small subtlety. The actual $cS2_{bottom}$ PDF is compose
 p_\mathrm{S2}(\mathrm{\cSiib}|E) = \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
 \end{equation}
 %
-where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges, which are unmeasured and thus summed over. The amplification factor $Y$ is applied on the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$ \RanComment{as measured and described in~\cite{XenonSingleElectron}}. 
+where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges, which are unmeasured and thus summed over. The amplification factor $Y$ is applied on the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$ as measured and described in~\cite{XenonSingleElectron}. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 For the high energy region we cannot produce the S2 distribution as the method in~\cite{DataMCXenon} is not calibrated for high enough recoil energies. We therefore use the NR calibration data distribution in log($\mathrm{cS2_b/cS1}$) to estimate the WIMP one. Above 180PE in \cSi\ the statistics of $^{241}$AmBe data is too low to estimate the distribution accurately so this forms the higher bound of this analysis. With the \cSiib\ distribution determined by this empirical method we require only a prediction of the \cSi\ distribution. This is obtained from Equation (\ref{eq:LeffEnergyScale}), followed by the application of detector and PMT responses, as well as the acceptance given in Figure~\ref{fig:Acc}, which completes the highE signal model definition.
@@ -160,7 +158,7 @@ Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and
 \begin{minipage}{1.\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/SigLowO1O6.eps}}
 \end{minipage}
-\caption{The expected signal in the low energy region for a 300 GeV/$c^2$ WIMP mass, Normalized to 5 events. Left(right) is the spectra for $\mathcal{O}_1$($\mathcal{O}_6$). Notice that for $\mathcal{O}_1$ most of the events are expected to deposit energy lower then 30 PE whereas for $\mathcal{O}_6$ a large fraction of the events do not appear in this region at all. The black lines indicate the bands constructed on these specific mass and operator models, and are dividing the signal into 8 equally distributed signal sub-regions. \RanComment{This parameter space can be mapped with a one to one mapping to the y-cS1 one.}}
+\caption{The expected signal in the low energy region for a 300 GeV/$c^2$ WIMP mass, Normalized to 5 events. Left(right) is the spectra for $\mathcal{O}_1$($\mathcal{O}_6$). Notice that for $\mathcal{O}_1$ most of the events are expected to deposit energy lower then 30 PE whereas for $\mathcal{O}_6$ a large fraction of the events do not appear in this region at all. The black lines indicate the bands constructed on these specific mass and operator models, and are dividing the signal into 8 equally distributed signal sub-regions. This parameter space can be mapped with a one to one mapping to the y-cS1 space.}
 \label{fig:LowE}
 \end{figure}
 
