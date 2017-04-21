@@ -14,15 +14,11 @@ the other optimized for high energies recoils ranging from 30-180\,PE in \cSi (h
 \label{subsubsec:HighE}
 This analysis channel targets high energy nuclear recoils and is the focus of this work. The data selection criteria we use are based on the criteria described in detail in \cite{Aprile:2012vw}, which were optimized for high 
 acceptance to low energy nuclear recoils.
-Most of these selection criteria (cuts) were found to be fully compatible with (or easily extended) to high energy depositions, however some required more comprehensive studies, which are described in what follows. 
+Most of these cuts were found to be fully compatible with (or easily extended) to high energy depositions, however some required more comprehensive studies, which are described in the following . 
 
-%very nice!
 The width of an S2 pulse increases with the depth (z) of the interaction. This is due to the diffusion of the electron cloud during its propagation
-through the liquid xenon. Low energy S2 events show larger spread
-due to low statistics of drifted ionization electrons, hence
-the cut was previously defined in an energy-dependent way. \BenComment{However, for the large recoil energies considered in this channel}, this energy dependency is \BenComment{no longer} valid. We therefore use here a cut on the S2 width which is a function of the depth of the interaction alone. 
-%\textbf{I can add a comment stating that the main differance is that we set S2sTot[0] =  5000 for any value above 5000, but I think it is not needed.}}
-%To reject peculiar events we compare the width of the S2 to its z-position. In this analysis we adopt a newer version of this cut, developed for scientific run III, see ~\cite{xe100_run_combination}, \Ale{can't you just paste what's written there for this cut} \RanComment{suprisingly no it is not described there , so either we do not describe it as well or keep it like this.}. 
+through the liquid xenon. since low energy S2 events show larger spread
+due to low statistics of drifted electrons, the cut was previously defined in an energy-dependent way. \BenComment{However, for the large recoil energies considered in this channel}, this energy dependency is \BenComment{no longer} valid. We therefore use here a cut on the S2 width which is a function of the depth of the interaction alone. 
 
 As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt here a cut that is more suitable to higher energies and demand a single S2 in a 160 $\mu$S window, instead of a linear dependence between the second S2 size and the first. 
 
@@ -41,14 +37,10 @@ The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibrati
 We define our signal region in the discrimination $(y,\cSi)$-plane using $^{241}$AmBe calibration data. 
 The \BenComment{region of interest (ROI)} is shown in Figure~\ref{fig:phasespace} as blue contour lines. The upper bound is defined such that \BenComment{the contribution due to xenon excitation lines is negligible}. The lower bound is defined as the 3\,$\sigma$ acceptance quantile of the $^{241}$AmBe distribution.
 
-We divide our signal region into two bands, constructed such that the $^{241}$AmBe data sample is equally distributed in y between them. The \sout{total} number of events in each band is $\sim3000$ events. The bands are further divided into nine bins. The definition and content of the bins are presented in Table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
+We divide our signal region into two bands in $y$, constructed such that the $^{241}$AmBe data sample is equally distributed in between them. The \sout{total} number of events in each band is $\sim3000$ events. The bands are further divided into nine bins. The definition and content of the bins are presented in Table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%% THIS PROBABLY NEEDS A SECTION, explaining well the uncertainty determination %%%%%%%%%%%%%%%%%
 The main source of background results from ER leakage. We therefore estimate the background distribution in the ROI using $^{60}$Co and $^{232}$Th calibration \BenComment{events}.  
-Contributions from radiogenic and cosmogenic neutrons, and accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, rather then using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
+Contributions from radiogenic and cosmogenic neutrons, as well as accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. \RanComment{The sideband is defined above the upper limit of this analysis and below the ER calibration band mean.} Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, rather then using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -132,17 +124,17 @@ where $Y = 8.27 \pm 0.26$
 is the amplification factor determined from the detector response to single electrons~\cite{XenonSingleElectron}, and $\Qy$ is the charge yield as a function of $E_\mathrm{nr}$. Applying the detector and PMT responses, and the acceptance as in \cite{xe100_run_combination}, defines the low-energy signal model over the region $3 \mathrm{PE} < \cSi < 30 \mathrm{PE}$, with $\cSiib > 73.5 \mathrm{PE}$ as the S2 threshold.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THIS PART IS NOT NEEDED  Ale votes for removal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Eq. \ref{eq:Qy} hides a small subtlety. The actual \cSiib PDF is composed of two pieces, a Poisson term associated with the initial charge liberation and a Gaussian term associated with the PMT response and other detector effects:
+Eq. \ref{eq:Qy} hides a subtlety. The actual \cSiib PDF is composed of two pieces, a Poisson term associated with the initial charge liberation and a Gaussian term associated with the PMT response and other detector effects:
 %
 \begin{equation}
 \label{eq.cS2pdf}
 p_\mathrm{S2}(\mathrm{\cSiib}|E) = \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'})\cdot\mathrm{Pois}(N'|\mu_Q)
 \end{equation}
 %
-where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges, which are unmeasured and thus summed over. The amplification factor $Y$ is applied on the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$ as measured and described in~\cite{XenonSingleElectron}. 
+where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges, which are unmeasured and thus summed over. The amplification factor $Y$ is applied to the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$ as measured and described in~\cite{XenonSingleElectron}. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For the high energy region we cannot produce the S2 distribution as the method in~\cite{DataMCXenon} \BenComment{has not been} calibrated \BenComment{for such high recoil energies}. We therefore use the NR calibration data distribution in log($\mathrm{\cSiib/\cSi}$) to estimate the WIMP \BenComment{distribution}. Above 180PE in \cSi, the statistics of $^{241}$AmBe data is too low to estimate the distribution \BenComment{accurately. This} forms the higher bound of this analysis. With the \cSiib\ distribution determined by this empirical method, we require only a prediction of the \cSi\ distribution. This is obtained from Equation (\ref{eq:LeffEnergyScale}), followed by the application of detector and PMT responses, as well as the acceptance given in Figure~\ref{fig:Acc}, which completes the high-energy signal model definition.
+For the high energy region we cannot produce the S2 distribution in the same way as the method in~\cite{DataMCXenon} \BenComment{has not been} calibrated \BenComment{for such high recoil energies}. We therefore use the NR calibration data distribution in log($\mathrm{\cSiib/\cSi}$) to estimate the WIMP \BenComment{distribution}. Above 180PE in \cSi, the statistics of $^{241}$AmBe data is too low to estimate the distribution \BenComment{accurately. This} forms the higher bound of this analysis. With the \cSiib\ distribution determined by this empirical method, we require only a prediction of the \cSi\ distribution. This is obtained from Equation (\ref{eq:LeffEnergyScale}), followed by the application of detector and PMT responses, as well as the acceptance given in Figure~\ref{fig:Acc}, which completes the high-energy signal model definition.
 
 Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (low-energy and high-energy).
 
