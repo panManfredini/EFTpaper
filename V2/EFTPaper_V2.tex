@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%
+% EFT Paper
+% v.1.1
+% R. Itay & B. Farmer & A. Manfredini
+%%%%%%%%%%%%%%%
+
+%\RequirePackage{lineno}
+\documentclass[twocolumn, showpacs, showkeys, amsmath, amssymb, amsfonts, floatfix, linenumbers]{revtex4-1} 
+\usepackage[colorlinks=true, citecolor=green, filecolor=blue, linkcolor=blue, urlcolor=blue, pdfencoding=auto]{hyperref}
+%\usepackage{amsfonts}
+\usepackage{color}
+\usepackage{placeins} % floatbarrier definition
+\usepackage{graphicx}
+\usepackage[perpage]{footmisc}
+\usepackage[normalem]{ulem}
+\newcommand \Leff{\mathcal{L}_{\mathrm{eff}}}
+\newcommand \Ly{L_{\mathrm{y}}}
+\newcommand \Qy{\mathcal{Q}_{\mathrm{y}}}
+\newcommand \keVcc{\mathrm{keV}/\mathrm{c}^2}
+\newcommand \keVr{\mathrm{keV_{nr}}}
+\newcommand \keVee{\mathrm{keV_{ee}}}
+\newcommand{\Xehund}{{XENON100}} 
+\newcommand{\Xeten}{{XENON10}}
+\newcommand{\Xe}{{\sc Xe}}
+\newcommand{\n}[1]{\mathrm{#1}}
+\newcommand{\RanComment}[1]{\textcolor{blue}{#1}}
+\newcommand{\ale}[1]{\textcolor{red}{#1}}
+\newcommand{\BenComment}[1]{\textcolor{green}{#1}}
+\newcommand{\Ale}[1]{\textcolor{green}{#1}}
+\newcommand{\cc}[1]{$c_{#1}^2\timesm_{Weak}^4$}
+\newcommand \Llike{\mathfrak{L}}
+\newcommand{\cSi}{\ensuremath{\mathrm{cS1}}}
+\newcommand{\cSiib}{\ensuremath{\mathrm{cS2}_\mathrm{b}}}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\allowdisplaybreaks
+
+%%%%%%
+% For rendering code example in appendix
+\usepackage{listings}
+\usepackage{color}
+\usepackage{fancyvrb}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  %numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+%%%%%%%%%
+
+\begin{document}
+%\linenumbers 
+
+\title{ EFT search for high energy nuclear recoils in the \Xehund\ dark matter detector}
+%\input{AuthorList}
+
+%\date{\today}
+
+\begin{abstract} 
+
+We report on WIMP search results in the \Xehund\ detector using a non-relativistic effective field theory approach. The data from science run II (34 kg * 224.6 live days) was re-analyzed, with an increased recoil energy interval compared to previous analyses, ranging from 6.6 to 240 keV. The data is found to be compatible with the background-only hypothesis. We present 90\% confidence level exclusion limits on the coupling constants of EFT operators $c_i$ using a binned profile likelihood method. We also consider the case of inelastic WIMP scattering, where incident WIMPs may up-scatter to a higher mass state, and set exclusion limits on this model as well. 
+\end{abstract}
+
+\pacs{}
+\keywords{Dark Matter, EFT, Xenon}
+
+\maketitle 
+
+
+\input{intro}
+
+\input{analysis}
+
+\input{stat}
+
+\input{result}
+\input{Summary}
+\input{Acknowledgment}
+
+
+\appendix
+\input{appendix}
+
+
+
+
+
+%%% BIBLIOGRAPHY %%%
+
+%\bibliographystyle{apsrev}
+\bibliographystyle{unsrt}
+\bibliography{EFTPaperBib}
+
+\end{document}
