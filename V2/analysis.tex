@@ -40,7 +40,7 @@ The region of interest (ROI) is shown in Figure~\ref{fig:phasespace} as blue con
 We divide our signal region into two bands in $y$, constructed such that the $^{241}$AmBe data sample is equally distributed in between them. The \sout{total} number of events in each band is $\sim3000$ events. The bands are further divided into nine bins. The definition and content of the bins are presented in Table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
 
 The main source of background results from ER leakage. We therefore estimate the background distribution in the ROI using $^{60}$Co and $^{232}$Th calibration events.  
-Contributions from radiogenic and cosmogenic neutrons, as well as accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. \RanComment{The sideband is defined above the upper limit of this analysis and below the ER calibration band mean.} Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, rather then using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
+Contributions from radiogenic and cosmogenic neutrons, as well as accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. The sideband is defined above the upper limit of this analysis and below the ER calibration band mean. Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, rather then using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -86,7 +86,7 @@ Contributions from radiogenic and cosmogenic neutrons, as well as accidental coi
 The signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{Aprile:2012vw}  to obtain the expected event rate in the detector in terms of detector variables (i.e. \cSi,\cSiib). In order to calculate the expected value of the signal in \cSi, we use Eq.~\ref{eq:LeffEnergyScale} for both energy regions, 
 \begin{equation}
 \label{eq:LeffEnergyScale}
-	\langle \cSi \rangle = E_{\mathrm{nr}} \cdot (\Ly \Leff) \cdot   \left(\frac{S_{nr}}{S_{ee}}\right) 
+	\langle \cSi \rangle = E_{\mathrm{nr}} \cdot (\Ly \Leff) \cdot   \left(\frac{S_\mathrm{nr}}{S_\mathrm{ee}}\right) 
 \end{equation}
 %\begin{multline}
 %\label{eq:low2D}
@@ -109,7 +109,7 @@ The signal model is produced by taking a theoretical event rate spectrum, the pr
 %\mu_Q(E) &\approx Q_y(E) \cdot E
 %\end{align}
 
-where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the average light yield in the detector, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_{ee}$ and $S_{nr}$ are the quenching factors due to the externally applied electric field. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28 \pm 0.04$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters and the construction of the signal PDF please see \cite{Aprile:2012vw,xe100_run_combination}. 
+where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the average light yield in the detector, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_\mathrm{ee}$ and $S_\mathrm{nr}$ are the quenching factors due to the externally applied electric field. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28 \pm 0.04$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below 3 keV are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters and the construction of the signal PDF please see \cite{Aprile:2012vw,xe100_run_combination}. 
 
 The expected cS2 signal is computed following~\cite{DataMCXenon} using Eq.~\ref{eq:Qy} for the low-energy region only,
 %For the lowE region, the expected cS2 signal can be calculated as well~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
