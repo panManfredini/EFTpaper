@@ -20,7 +20,7 @@ The width of an S2 pulse increases with the depth (z) of the interaction. This i
 through the liquid xenon. Since low energy S2 events show larger spread
 due to low statistics of drifted electrons, the cut was previously defined in an energy-dependent way. However, for the large recoil energies considered in this channel, this energy dependency is no longer valid. We therefore use here a cut on the S2 width which is a function of the depth of the interaction alone. 
 
-As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt here a cut that is more suitable to higher energies and demand a single S2 in a 160 $\mu$S window, instead of a linear dependence between the second S2 size and the first. 
+As a WIMP will interact only once in the detector, we remove events which have more than one S2. We adopt in this analysis a cut that is more suitable to higher energies and demand a single S2 in a 160 $\mu$s window, instead of a linear dependence between the second S2 size and the first. 
 
 To define the interaction's exact location in ($x,y$), we use several algorithms, one of which is based on a Neural Network (NN)~\cite{Aprile:2012vw}. The NN was not trained to recognize high energy ER events and therefore a cut on the NN reconstruction quality is not suitable for this analysis. We therefore discard this cut but keep all other cuts on position reconstruction quality, which is sufficient to ensure a correct position reconstruction. 
 
@@ -37,10 +37,10 @@ The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibrati
 We define our signal region in the discrimination $(y,\cSi)$-plane using $^{241}$AmBe calibration data. 
 The region of interest (ROI) is shown in Figure~\ref{fig:phasespace} as blue contour lines. The upper bound is defined such that the contribution due to xenon excitation lines is negligible. The lower bound is defined as the 3\,$\sigma$ acceptance quantile of the $^{241}$AmBe distribution.
 
-We divide our signal region into two bands in $y$, constructed such that the $^{241}$AmBe data sample is equally distributed in between them. The \sout{total} number of events in each band is $\sim3000$ events. The bands are further divided into nine bins. The definition and content of the bins are presented in Table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
+We divide our signal region into two bands in $y$, constructed such that the $^{241}$AmBe data sample is equally distributed in between them. The number of events in each band is $\sim3000$ events. The bands are further divided into nine bins, \RanComment{The bins number and definition is optimized using  using Monte-Carlo (MC) simulation}. The definition and content of the bins are presented in Table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
 
 The main source of background results from ER leakage. We therefore estimate the background distribution in the ROI using $^{60}$Co and $^{232}$Th calibration events.  
-Contributions from radiogenic and cosmogenic neutrons, as well as accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is simply the ratio of observed counts to calibration counts in an independent sideband. The sideband is defined above the upper limit of this analysis and below the ER calibration band mean. Note that in the computation of exclusion limits the background normalization is instead fitted to data during hypothesis testing, rather then using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
+Contributions from radiogenic and cosmogenic neutrons, as well as accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the background expectation for each bin in the ROI along with the observed events in each bin. Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is the ratio of observed counts to calibration counts in an independent sideband. The sideband is defined above the upper limit of this analysis and below the ER calibration band mean. Note that in the computation of exclusion limits, the background normalization is fitted to data during hypothesis testing, rather than using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -142,7 +142,7 @@ Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and
 \begin{minipage}{1.\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/SigHighO1O6.eps}}
 \end{minipage}
-\caption{The expected signal in the high energy region for a 300~GeV/$c^2$ WIMP mass, normalized to 5 events. Left(right) is the spectra for $O_1$($O_6$). Notice that for $O_1$ most of the events are not expected to deposit energy higher then 30 PE whereas for $O_6$ a large fraction of the events appear in this region.}
+\caption{The expected signal in the high energy region for a 300~GeV/$c^2$ WIMP mass, normalized to 5 events. Left(right) is the spectra for $O_1$($O_6$). Notice that for $O_1$ most of the events are not expected to deposit energy higher than 30 PE whereas for $O_6$ a large fraction of the events appear in this region.}
 \label{fig:HighE}
 \end{figure} 
 
@@ -150,7 +150,7 @@ Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and
 \begin{minipage}{1.\linewidth}
 \centerline{\includegraphics[width=1.\linewidth]{Figures/SigLowO1O6.eps}}
 \end{minipage}
-\caption{The expected signal in the low energy region for a 300~GeV/$c^2$ WIMP mass, normalized to 5 events. Left(right) is the spectra for $\mathcal{O}_1$($\mathcal{O}_6$). Notice that for $\mathcal{O}_1$ most of the events are expected to deposit energy lower then 30 PE whereas for $\mathcal{O}_6$ a large fraction of the events do not appear in this region at all. The black lines indicate the bands constructed on these specific mass and operator models, and are dividing the signal into 8 equally distributed signal sub-regions. This parameter space can be mapped with a one to one mapping to the $y-\cSi$ space.}
+\caption{The expected signal in the low energy region for a 300~GeV/$c^2$ WIMP mass, normalized to 5 events. Left(right) is the spectra for $\mathcal{O}_1$($\mathcal{O}_6$). Notice that for $\mathcal{O}_1$ most of the events are expected to deposit energy lower than 30 PE whereas for $\mathcal{O}_6$ a large fraction of the events do not appear in this region at all. The black lines indicate the bands constructed on these specific mass and operator models, and are dividing the signal into 8 equally distributed signal sub-regions. This parameter space can be mapped with a one to one mapping to the $y-\cSi$ space.}
 \label{fig:LowE}
 \end{figure}
 
@@ -169,7 +169,7 @@ Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and
 \subsubsection{Elastic Scattering}
 \label{subsubsec:Elastic}
 
-The expected recoil energy spectrum of each WIMP mass for each EFT operator is calculated using the Mathematica package \texttt{DMFormFactor} supplied by Anand et. al.~\cite{Fitzpatrick:MathTools,Anand:MathTools}. We use standard assumptions as in previous analyses (e.g \cite{xe100_run_combination}) regarding the local dark matter density and velocity distribution, namely $\rho_\mathrm{local} = 0.3$~GeV/cm\textsuperscript{3} and a Maxwell-Boltzman distribution with a mean given by the local circular velocity $v_0 = 220$ km/s and cut off at an escape velocity of $v_\mathrm{esc} = 544$ km/s. The responses of xenon nuclei to a scattering event are computed from one-body density matrices provided with the package, in contrast to the Helm form factors which have been used in previous analyses. These spectra are produced for the seven most abundant xenon isotopes (128,129,130,131,132,134 and 136), combined in proportion to the abundance of these isotopes in the XENON detector \cite{xe100_run10_sd}, then translated into expected signal rates via the method described above.
+The expected recoil energy spectrum of each WIMP mass for each EFT operator is calculated using the Mathematica package \texttt{DMFormFactor} supplied by Anand et. al.~\cite{Fitzpatrick:MathTools,Anand:MathTools}. We use standard assumptions as in previous analyses (e.g \cite{xe100_run_combination}) regarding the local dark matter density and velocity distribution, namely $\rho_\mathrm{local} = 0.3$~GeV/cm\textsuperscript{3} and a Maxwell-Boltzman distribution with a mean given by the local circular velocity $v_0 = 220$ km/s and cut off at an escape velocity of $v_\mathrm{esc} = 544$ km/s. The responses of xenon nuclei to a scattering event are computed from one-body density matrices provided with the package, in contrast to the Helm form factors which have been used in previous analyses. These spectra are produced for the seven most abundant xenon isotopes (128, 129, 130, 131, 132, 134 and 136), combined in proportion to the abundance of these isotopes in the XENON detector \cite{xe100_run10_sd}, then translated into expected signal rates via the method described above.
 
 \subsubsection{Inelastic WIMP Scattering}
 \label{subsubsec:Inelastic}
