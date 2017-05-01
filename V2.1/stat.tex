@@ -1,10 +1,9 @@
 %Explanation of the likelihood methods used, short explaination of the likelihood parts and constraints for combination, joint usage of nuisance parameters {Leff}.
 
-\subsection{Statistical Inference }
+\subsection{StatisAddittical Inference }
 \label{sec:LikelihoodFunction}
-The statistical interpretation of data is performed by means of a binned profiled likelihood method, in which hypothesis testing relies upon a likelihood ratio test statistic, $\tilde{q}$, 
-and its asymptotic distributions~\cite{asympt}. The two analysis channels are statistically independent once certain common nuisance parameters are factored out, we therefore combine them by multiplying their likelihoods together to produce a joint likelihood.
-Both analyses parametrize the NR relative scintillation efficiency, $\Leff$, based on existing measurements~\cite{run8Result}. Its uncertainty is the major contributor to energy scale uncertainties and is considered as correlated between the two analysis channels via a separate nuisance likelihood term.
+The statistical interpretation of data is performed by means of a binned profile likelihood method, in which hypothesis testing relies upon a likelihood ratio test statistic, $\tilde{q}$, 
+and its asymptotic distributions~\cite{asympt}. \RanComment{The two analysis channels are combined by multiplying their likelihoods together to produce a joint likelihood, this is possible because they are statistically independent once certain nuisance parameters are factored out}. Both analyses parametrize the NR relative scintillation efficiency, $\Leff$, based on existing measurements~\cite{run8Result}. Its uncertainty is the major contributor to energy scale uncertainties and is considered as correlated between the two analysis channels via a separate nuisance likelihood term.
 Throughout this study, all the parameters related to systematic uncertainties are assumed to be normally distributed.
 %for the low ($\Llike_{\mathrm{lowE}}$) and high  ($\Llike_{\mathrm{highE}}$) energy channels as shown in equation~\ref{eq:FullLikelihood}. 
 %\begin{equation}
@@ -15,7 +14,7 @@ Throughout this study, all the parameters related to systematic uncertainties ar
 For the low energy channel an extended likelihood function is employed which is very similar to the one reported in~\cite{Aprile:2011hx} and described in detail in~\cite{xe100_run_combination}. 
 The ROI discriminating (y,cS1)-plane is divided into eight WIMP mass dependent bands where events are counted. This binned approach is extended with the corresponding cS1-projected PDF of each band. The total normalization of the background is fit to data, and an uncertainty is assigned to the relative normalization of each band according to the corresponding statistical uncertainty of the calibration sample.
 %The MLE of the background expectation in each band is constrained by the statistical uncertainty of the calibration sample in that band. 
-Signal shape variations due to energy scale uncertainty are modeled via simulation. Additionally to $\Leff$, uncertainties due to the charge yield function $\Qy$ are parametrized as described in~\cite{DataMCXenon}.
+Signal shape variations due to energy scale uncertainty are modeled via simulation. To $\Leff$, uncertainties due to the charge yield function $\Qy$ are parametrized as described in~\cite{DataMCXenon}.
 
 The high energy channel analysis employs a binned likelihood function. Observed and expected event yield are compared in the nine ROI (y,cS1)-bins described in section~\ref{subsubsec:HighE}. 
 Given the large statistical uncertainty of the background model the above extended likelihood approach is not repeated here.
