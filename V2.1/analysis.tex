@@ -13,9 +13,7 @@ the other optimized for high energies recoils ranging from 30-180\,PE in \cSi (h
 \subsection{High Energy Channel}
 \label{subsubsec:HighE}
 This analysis channel targets high energy nuclear recoils and is the focus of this work. 
-%The data selection criteria we use are based on the criteria described in detail in \cite{Aprile:2012vw}, which were optimized for high 
-%acceptance to low energy nuclear recoils.
-%Most of these cuts were found to be fully compatible with (or easily extended) to high energy depositions, however some required more comprehensive studies, which are described in the following . 
+\RanComment{The data selection criteria used are based on the criteria described in detail in \cite{Aprile:2012vw}, which were optimized for high acceptance to low energy nuclear recoils. Most of these cuts were found to be fully compatible with (or easily extended) to high energy depositions, however some required more comprehensive studies, which are described in the following .} 
 \ale{The data selection criteria were optimized for high acceptance to low energy nuclear recoils and are based on what described in~\cite{Aprile:2012vw}, 
 in the following we discuss in more detail the cut optimization process.}
 
@@ -39,19 +37,14 @@ The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibrati
 \end{figure}
 
 We define our signal region in the discrimination $(y,\cSi)$-plane using $^{241}$AmBe calibration data. 
-The region of interest is shown in Figure~\ref{fig:phasespace} as blue contour lines. The upper bound \ale{in $y$} is defined such that the contribution due to xenon excitation lines is negligible. The lower bound is defined as the 3\,$\sigma$ acceptance quantile of the $^{241}$AmBe distribution.
+The region of interest is shown in Figure~\ref{fig:phasespace} as blue contour lines. The upper bound in $y$ is defined such that the contribution due to xenon excitation lines is negligible. The lower bound is defined as the 3\,$\sigma$ acceptance quantile of the $^{241}$AmBe distribution.
 
-We divide our signal region into two bands in $y$, constructed such that the $^{241}$AmBe data sample is equally distributed in between them. The number of events in each band is $\sim3000$. The bands are further divided into nine bins, the number and boundaries of which have been optimized via Monte-Carlo (MC) simulation. 
-The definitions 
-%and contents  %%%% content sound ugly, use yield if you have to, but anyway is re-said in the next paragraph. 
-of the bins \ale{boundaries}  are presented in Table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
+We divide our signal region into two bands in $y$, constructed such that the $^{241}$AmBe data sample is equally distributed in between them. The number of events in each band is $\sim3000$. The bands are further divided into nine bins, the number and boundaries of which have been optimized via Monte-Carlo (MC) simulation. The definitions of the bins boundaries are presented in Table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
 
 The main source of background results from ER leakage. We therefore estimate the background distribution in the ROI using $^{60}$Co and $^{232}$Th calibration events.  
 Contributions from radiogenic and cosmogenic neutrons, as well as accidental coincidence, are negligible for such a high energy recoil. In Table~\ref{table:BinDef} we report the 
-%background expectation for each bin in the ROI along with the observed events in each bin. 
-\ale{background expectation in the ROI along with the observed events for each bin.}
-Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is the ratio of observed counts to calibration counts in an independent sideband. The sideband is defined above the upper limit of this analysis and below the ER calibration band mean. Note that in the computation of exclusion limits, the background normalization is fitted to data,
-\sout{during hypothesis testing} rather than using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
+background expectation in the ROI along with the observed events for each bin.
+Here the background expectation is computed by scaling the calibration sample yield by $6.54\times10^{-3}$, which is the ratio of observed counts to calibration counts in an independent sideband. The sideband is defined above the upper limit of this analysis and below the ER calibration band mean. Note that in the computation of exclusion limits, the background normalization is fitted to data, rather than using the sideband normalization, as described in section~\ref{sec:LikelihoodFunction}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -95,8 +88,7 @@ Here the background expectation is computed by scaling the calibration sample yi
 \subsection{Signal Model}
 \label{subsec:SignalModel}
 The signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{Aprile:2012vw}  to obtain the expected event rate in the detector in terms of detector variables (i.e. \cSi,\cSiib). 
-%In order to calculate the expected value of the signal in \cSi, we use Eq.~\ref{eq:LeffEnergyScale} for both energy regions, 
-\ale{In both analysis channels, we use Eq.~\ref{eq:LeffEnergyScale} in order to compute the expected average \cSi for a given NR energy,}
+In both analysis channels, we use Eq.~\ref{eq:LeffEnergyScale} in order to compute the expected average \cSi for a given NR energy,
 \begin{equation}
 \label{eq:LeffEnergyScale}
 	\langle \cSi \rangle = E_{\mathrm{nr}} \cdot (\Ly \Leff) \cdot   \left(\frac{S_\mathrm{nr}}{S_\mathrm{ee}}\right) 
@@ -123,8 +115,7 @@ The signal model is produced by taking a theoretical event rate spectrum, the pr
 %\end{align}
 where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the average light yield in the detector, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_\mathrm{ee}$ and $S_\mathrm{nr}$ are the quenching factors due to the externally applied electric field. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28 \pm 0.04$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below $3~\keVr$ are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters and the construction of the signal probability density function (PDF) please see \cite{Aprile:2012vw,xe100_run_combination}. 
 
-%The expected cS2 signal is computed following~\cite{DataMCXenon} using Eq.~\ref{eq:Qy} for the low-energy region only,
-\ale{For the low-energy region, the expected cS2 signal is computed following~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},}
+For the low-energy region, the expected cS2 signal is computed following~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
 %For the lowE region, the expected cS2 signal can be calculated as well~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
 %
 \begin{equation}
@@ -144,20 +135,14 @@ Eq. \ref{eq:Qy} hides a subtlety. The actual \cSiib PDF is composed of two piece
 p_\mathrm{S2}(\mathrm{\cSiib}|E) = \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'})\cdot\mathrm{Pois}(N'|\mu_Q)
 \end{equation}
 %
-where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges.
-%--Nope-- you sum because you want to produce a smeared PDF.
-\sout{which are unmeasured and thus summed over} 
-The amplification factor $Y$ is applied to the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$ as measured and described in~\cite{XenonSingleElectron}. 
+where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in a nuclear recoil event of energy $E$, and $N'$ is the actual number of liberated charges. The amplification factor $Y$ is applied to the actual number of liberated charges $N'$, not the expected number $\mu_Q$. Associated with this is the variance of the Gaussian response PDF, $\sigma_Y\sqrt{N'}$, where in this analysis $\sigma_Y = 6.93$ as measured and described in~\cite{XenonSingleElectron}. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For the high energy region we cannot produce the S2 distribution in the same way as the method in~\cite{DataMCXenon},
-\ale{since it } has not been calibrated for such high recoil energies. We therefore use the NR calibration data distribution in log($\mathrm{\cSiib/\cSi}$) to estimate the WIMP distribution. Above 180PE in \cSi, the 
-%statistics 
-\ale{event yield} of $^{241}$AmBe data is too low to estimate the distribution accurately. This forms the higher bound of this analysis. With the \cSiib\ distribution determined by this empirical method, we require only a prediction of the \cSi\ distribution. This is obtained from Equation (\ref{eq:LeffEnergyScale}), followed by the application of detector and PMT responses, as well as the acceptance given in Figure~\ref{fig:Acc}, which completes the high-energy signal model definition.
+For the high energy region we cannot produce the S2 distribution in the same way as the method in~\cite{DataMCXenon},since it  has not been calibrated for such high recoil energies. We therefore use the NR calibration data distribution in log($\mathrm{\cSiib/\cSi}$) to estimate the WIMP distribution. Above 180PE in \cSi, the event yield of $^{241}$AmBe data is too low to estimate the distribution accurately. This forms the higher bound of this analysis. With the \cSiib\ distribution determined by this empirical method, we require only a prediction of the \cSi\ distribution. This is obtained from Equation (\ref{eq:LeffEnergyScale}), followed by the application of detector and PMT responses, as well as the acceptance given in Figure~\ref{fig:Acc}, which completes the high-energy signal model definition.
 
 %Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (low-energy and high-energy).
-\ale{Figures ~\ref{fig:HighE} and \ref{fig:LowE} shows signal distribution examples for two EFT operators and for the low and the high energy region, respectively.
-In both cases, the signal distributions are normalized to yield 5 events in the total energy range (low-energy and high-energy).}
+Figures ~\ref{fig:HighE} and \ref{fig:LowE} shows signal distribution examples for two EFT operators and for the low and the high energy region, respectively.
+In both cases, the signal distributions are normalized to yield 5 events in the total energy range (low-energy and high-energy).
 
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
