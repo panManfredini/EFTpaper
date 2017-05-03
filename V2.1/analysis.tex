@@ -10,7 +10,7 @@ The data analysis is divided into two mutually exclusive channels, one optimized
 the other optimized for high energies recoils ranging from 30-180\,PE in \cSi (high-energy). These two analyses are then combined statistically. 
 \input{lowEnergy}
 
-\subsection{High Energy Channel}
+\subsection{High energy channel}
 \label{subsubsec:HighE}
 This analysis channel targets high energy nuclear recoils and is the focus of this work. The data selection criteria used are based on the criteria described in detail in \cite{Aprile:2012vw}, which were optimized for high acceptance to low energy nuclear recoils. Most of these cuts were found to be fully compatible with (or easily extended) to high energy depositions, however some required more comprehensive studies, which are described in the following . 
 %\ale{The data selection criteria were optimized for high acceptance to low energy nuclear recoils and are based on what described in~\cite{Aprile:2012vw}, 
@@ -51,28 +51,28 @@ Here the background expectation is computed by scaling the calibration sample yi
 \begin{table}
 \resizebox{1.\columnwidth}{!}{
 
-	 \begin{tabular}{|c| c| c| c| c| c |} 
- \hline
- \# & Band  & Energy Range $(\cSi)$  & \# Background Events & \# Data Events \\  
+	 \begin{tabular}{ c c c c c c } 
  \hline\hline
+ \# & Band  & Energy Range $(\cSi)$  & \# Background Events & \# Data Events \\  
+ \hline
  1 & upper & 30  - 40  & 23.5$\pm$5.1 & 20 \\ 
- \hline
+ 
  2 & upper & 40  - 50  & 15.7$\pm$3.4 & 17 \\
- \hline
+ 
  3 & upper & 50  - 80  & 12.4$\pm$2.7 & 11 \\
- \hline
+ 
  4 & upper & 80  - 120 & 1.1$\pm$0.3  & 1  \\
- \hline
+ 
  5 & upper & 120 - 150 & 0.1$\pm$0.05  & 1  \\  
- \hline
+ 
  6 & upper & 150 - 180 & 0.08$\pm$0.04 & 0  \\  
- \hline
+ 
  7 & lower & 30  - 50  & 0.9$\pm$0.26  & 0  \\  
- \hline
+ 
  8 & lower & 50  - 90 & 0.35$\pm$0.11 & 0  \\  
- \hline
+ 
  9 & lower & 120 - 180 & 0.18 $\pm$0.07& 0  \\  
- \hline
+ \hline\hline
 \end{tabular}
 }
 
@@ -84,7 +84,7 @@ Here the background expectation is computed by scaling the calibration sample yi
 
 
 
-\subsection{Signal Model}
+\subsection{Signal model}
 \label{subsec:SignalModel}
 The signal model is produced by taking a theoretical event rate spectrum, the production of which is described in sections \ref{subsubsec:Elastic} and \ref{subsubsec:Inelastic}, and applying the analysis acceptance and detector response as described in ~\cite{Aprile:2012vw}  to obtain the expected event rate in the detector in terms of detector variables (i.e. \cSi,\cSiib). 
 In both analysis channels, we use Eq.~\ref{eq:LeffEnergyScale} in order to compute the expected average \cSi for a given NR energy,
@@ -171,12 +171,12 @@ In both cases, the signal distributions are normalized to yield 5 events in the 
 %\sout{
 %where $p_\mathrm{S1}(\mathrm{\cSi}|E)$ is computed as in Eq. \ref{eq:S1S2pdf}. The S1 acceptance $\epsilon_\mathrm{S1}(\cSi)$ is given in Fig. \ref{fig:Acc}, and the S2 acceptance $\epsilon_\mathrm{S2'}(E)$ is negligibly different from one over the signal region $30 \mathrm{PE} < \cSi < 180 \mathrm{PE}$.
 %}
-\subsubsection{Elastic Scattering}
+\subsubsection{Elastic scattering}
 \label{subsubsec:Elastic}
 
 The expected recoil energy spectrum of each WIMP mass for each EFT operator is calculated using the Mathematica package \texttt{DMFormFactor} supplied by Anand et. al.~\cite{Fitzpatrick:MathTools,Anand:MathTools}. We use standard assumptions as in previous analyses (e.g \cite{xe100_run_combination}) regarding the local dark matter density and velocity distribution, namely $\rho_\mathrm{local} = 0.3$~GeV/cm\textsuperscript{3} and a Maxwell-Boltzman distribution with a mean given by the local circular velocity $v_0 = 220$ km/s and cut off at an escape velocity of $v_\mathrm{esc} = 544$ km/s. The responses of xenon nuclei to a scattering event are computed from one-body density matrices provided with the package, in contrast to the Helm form factors which have been used in previous analyses. These spectra are produced for the seven most abundant xenon isotopes (128, 129, 130, 131, 132, 134 and 136), combined in proportion to the abundance of these isotopes in the XENON detector \cite{xe100_run10_sd}, then translated into expected signal rates via the method described above.
 
-\subsubsection{Inelastic WIMP Scattering}
+\subsubsection{Inelastic WIMP scattering}
 \label{subsubsec:Inelastic}
 To obtain recoil spectra for WIMP-nucleon scattering for all EFT operators with inelastic kinematics, we use a modified version of \texttt{DMFormFactor} provided by Barello et. al. \cite{InelasticMath}. The authors have modified the original package to enforce the new energy conservation condition $\delta_m + \vec{v}\cdot\vec{q} + \left|\vec{q}\right|^2/2\mu_N = 0$, primarily by replacing 
 $\vec{v}^\perp_{elastic} \rightarrow \vec{v}^\perp_{inelastic} = \vec{v}^\perp_{elastic} +\frac{\delta_m}{\vert{\vec{q}}\vert^2}\vec{q}$ in the definitions of the EFT and nuclear operators, giving rise to the well-known minimum velocity for scattering
