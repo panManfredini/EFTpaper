@@ -1,9 +1,7 @@
 \section{Data Analysis}
 \label{sec:Analysis}
 In this work we re-analyze science run~II data recorded between February 2011 and March 2012, 
-corresponding to 224.6~live~days. The characterization of the detector response to ER interactions is performed using dedicated calibration campaigns with $^{60}$Co and $^{232}$Th radioactive sources, while the response to NR interactions is performed using $^{241}$AmBe calibration campaigns.
-%\sout{as well as for estimating the background from $\beta$ and $\gamma$-particles. For the ER sample we expose the detector to $^{60}$Co and $^{232}$Th sources, while for the NR sample we use $^{241}$AmBe.}
-
+corresponding to 224.6~live~days. The characterization of the detector response to ER interactions is performed using dedicated calibration campaigns with $^{60}$Co and $^{232}$Th radioactive sources, while the response to NR interactions is performed using $^{241}$AmBe neutron source calibration campaigns.
  
 This work extends the previous results~\cite{xe100_run10_si,xe100_run_combination}, referred to in the following as the low-energy channel, with a new study exploring the recoil energy range between $43-240~\keVr$. 
 The data analysis is divided into two mutually exclusive channels, one optimized for low energies and ranging from 3-30~PE in \cSi{} (low-energy), 
@@ -13,9 +11,6 @@ the other optimized for high energies recoils ranging from 30-180~PE in \cSi{} (
 \subsection{High energy channel}
 \label{subsubsec:HighE}
 This analysis channel targets high energy nuclear recoils and is the focus of this work. The data selection criteria used are based on the criteria described in detail in \cite{Aprile:2012vw}, which were optimized for high acceptance to low energy nuclear recoils. Most of these cuts were found to be fully compatible with (or easily extended) to high energy depositions, however some required more comprehensive studies, which are described in the following . 
-%\ale{The data selection criteria were optimized for high acceptance to low energy nuclear recoils and are based on what described in~\cite{Aprile:2012vw}, 
-%in the following we discuss in more detail the cut optimization process.}
-
 
 The width of an \Sii{} pulse increases with the depth (z) of the interaction. This is due to the diffusion of the electron cloud during its propagation
 through the liquid xenon. Since low energy \Sii{} events show larger spread
@@ -36,7 +31,7 @@ The total acceptance to WIMP signals is computed based on $^{241}$AmBe calibrati
 \end{figure}
 
 We define our signal region in the discrimination $(y,\cSi)$-plane using $^{241}$AmBe calibration data. 
-The region of interest is shown in Figure~\ref{fig:phasespace} as blue contour lines. The upper bound in $y$ is defined such that the contribution due to xenon excitation lines is negligible. The lower bound is defined as the 3\,$\sigma$ acceptance quantile of the $^{241}$AmBe distribution.
+The region of interest is shown in Figure~\ref{fig:phasespace} as blue contour lines. The upper bound in $y$ is defined such that the contribution due to xenon inelastic interaction lines is negligible. The lower bound is defined as the 3\,$\sigma$ acceptance quantile of the $^{241}$AmBe distribution.
 
 We divide our signal region into two bands in $y$, constructed such that the $^{241}$AmBe data sample is equally distributed in between them. The number of events in each band is $\sim3000$. The bands are further divided into nine bins, the number and boundaries of which have been optimized via Monte-Carlo (MC) simulation. The definitions of the bins boundaries are presented in Table~\ref{table:BinDef} and in Figure~\ref{fig:phasespace}. 
 
@@ -55,23 +50,23 @@ Here the background expectation is computed by scaling the calibration sample yi
  \hline\hline
  \# & Band  & Energy Range $(\cSi)$  & \# Background Events & \# Data Events \\  
  \hline
- 1 & upper & 30  - 40  & 23.5$\pm$5.1 & 20 \\ 
+ 1 & upper & 30  - 40  & 23.5$\pm$5.09 & 20 \\ 
  
- 2 & upper & 40  - 50  & 15.7$\pm$3.4 & 17 \\
+ 2 & upper & 40  - 50  & 15.7$\pm$3.46 & 17 \\
  
- 3 & upper & 50  - 80  & 12.4$\pm$2.7 & 11 \\
+ 3 & upper & 50  - 80  & 12.4$\pm$2.76 & 11 \\
  
- 4 & upper & 80  - 120 & 1.1$\pm$0.3  & 1  \\
+ 4 & upper & 80  - 120 & 1.1$\pm3.04\times 10^{-1}$  & 1  \\
  
- 5 & upper & 120 - 150 & 0.1$\pm$0.05  & 1  \\  
+ 5 & upper & 120 - 150 & 0.1$\pm4.55\times 10^{-2}$  & 1  \\  
  
- 6 & upper & 150 - 180 & 0.08$\pm$0.04 & 0  \\  
+ 6 & upper & 150 - 180 & 0.08$\pm3.88\times 10^{-2}$ & 0  \\  
  
- 7 & lower & 30  - 50  & 0.9$\pm$0.26  & 0  \\  
+ 7 & lower & 30  - 50  & 0.9$\pm2.56\times 10^{-1}$  & 0  \\  
  
- 8 & lower & 50  - 90 & 0.35$\pm$0.11 & 0  \\  
+ 8 & lower & 50  - 90 & 0.35$\pm1.18\times 10^{-1}$ & 0  \\  
  
- 9 & lower & 120 - 180 & 0.18 $\pm$0.07& 0  \\  
+ 9 & lower & 120 - 180 & 0.18 $\pm7.03\times 10^{-2}$& 0  \\  
  \hline\hline
 \end{tabular}
 }
@@ -92,27 +87,8 @@ In both analysis channels, we use Eq.~\ref{eq:LeffEnergyScale} in order to compu
 \label{eq:LeffEnergyScale}
 	\langle \cSi \rangle = E_{\mathrm{nr}} \cdot (\Ly \Leff) \cdot   \left(\frac{S_\mathrm{nr}}{S_\mathrm{ee}}\right) 
 \end{equation}
-%\begin{multline}
-%\label{eq:low2D}
-%  \frac{\mathrm{d}^2 R}{\mathrm{d}\cSi.\mathrm{d}\cSiib} = \epsilon_\mathrm{S1}(\cSi).\epsilon_\mathrm{S2}(\cSiib) \\ 
-%  \times \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.p_\mathrm{S1}(\mathrm{\cSi}|E).p_\mathrm{S2}(\mathrm{\cSiib}|E) \, \mathrm{d}E
-%\end{multline}
 
-%where
-%
-%\begin{align}
-%\label{eq:S1S2pdf}
-% p_\mathrm{S1}(\mathrm{\cSi}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSi}|N',0.5 \sqrt{N'}).\mathrm{Pois}(N'|\mu_\gamma) \\
-% p_\mathrm{S2}(\mathrm{\cSiib}|E) &= \sum_{N'} P_\mathrm{pmt}(\mathrm{\cSiib}|Y N',\sigma_Y \sqrt{N'}).\mathrm{Pois}(N'|\mu_Q)
-%\end{align}
-%
-%where $P_\mathrm{pmt}$ is a normal distribution with arguments as $N(x|\mu,\sigma)$, and where
-%
-%\begin{align}
-%\mu_\gamma(E) &\approx E \cdot L_y \cdot L_\mathrm{eff}(E) \cdot \frac{S_\mathrm{nr}}{S_\mathrm{ee}} \\
-%\mu_Q(E) &\approx Q_y(E) \cdot E
-%\end{align}
-where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the average light yield in the detector, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_\mathrm{ee}$ and $S_\mathrm{nr}$ are the quenching factors due to the externally applied electric field. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28 \pm 0.04$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below $3~\keVr$ are assumed to produce no light since $\Leff$ is not measured at these energies. For details of the physics behind these parameters and the construction of the signal probability density function (PDF) please see \cite{Aprile:2012vw,xe100_run_combination}. 
+where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the average light yield in the detector, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_\mathrm{ee}$ and $S_\mathrm{nr}$ are the quenching factors due to the externally applied electric field. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28 \pm 0.04$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below $3~\keVr$ are assumed to produce no light. For details of the physics behind these parameters and the construction of the signal probability density function (PDF) please see \cite{Aprile:2012vw,xe100_run_combination}. 
 
 For the low-energy region, the expected \cSiib{} signal is computed following~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
 %For the lowE region, the expected cS2 signal can be calculated as well~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
@@ -140,12 +116,12 @@ where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in 
 For the high energy region we cannot produce the \Sii{} distribution in the same way as the method in~\cite{DataMCXenon}, since it  has not been calibrated for such high recoil energies. We therefore use the NR calibration data distribution in log($\mathrm{\cSiib/\cSi}$) to estimate the WIMP distribution. Above 180~PE in \cSi{}, the event yield of $^{241}$AmBe data is too low to estimate the distribution accurately. This forms the upper bound of this analysis. With the \cSiib{} distribution determined by this empirical method, we require only a prediction of the \cSi{} distribution. This is obtained from Equation (\ref{eq:LeffEnergyScale}), followed by the application of detector and PMT responses, as well as the acceptance given in Figure~\ref{fig:Acc}, which completes the high-energy signal model definition.
 
 %Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (low-energy and high-energy).
-Figures ~\ref{fig:HighE} and \ref{fig:LowE} shows signal distribution examples for two EFT operators and for the low and the high energy region, respectively.
+Figures ~\ref{fig:HighE} and \ref{fig:LowE} shows dashedsignal distribution examples for two EFT operators and for the low and the high energy region, respectively.
 In both cases, the signal distributions are normalized to yield 5 events in the total energy range (low-energy and high-energy).
 
 \begin{figure}[h!]
 \begin{minipage}{1.\linewidth}
-\centerline{\includegraphics[width=1.\linewidth]{Figures/SigHighO1O6.eps}}
+\centerline{\includegraphics[width=1.\linewidth]{Figures/SigHighO1O6.png}}
 \end{minipage}
 \caption{The expected signal in the high energy region for a 300~GeV/$c^2$ WIMP mass, normalized to 5 events. Left(right) is the spectra for $O_1$($O_6$). Notice that for $O_1$ most of the events are not expected to deposit energy higher than 30~PE whereas for $O_6$ a large fraction of the events appear in this region.}
 \label{fig:HighE}
@@ -162,15 +138,6 @@ In both cases, the signal distributions are normalized to yield 5 events in the 
 
 
 
-%
-%\begin{multline}
-%\label{eq:high2D}
-%  \frac{\mathrm{d} R}{\mathrm{d}\cSi} = \epsilon_\mathrm{S1}(\cSi) \int \! \frac{\mathrm{d}R}{\mathrm{d}E}.\epsilon_\mathrm{S2'}(E).p_\mathrm{S1}(\mathrm{\cSi}|E) \, \mathrm{d}E
-%\end{multline}
-
-%\sout{
-%where $p_\mathrm{S1}(\mathrm{\cSi}|E)$ is computed as in Eq. \ref{eq:S1S2pdf}. The S1 acceptance $\epsilon_\mathrm{S1}(\cSi)$ is given in Fig. \ref{fig:Acc}, and the S2 acceptance $\epsilon_\mathrm{S2'}(E)$ is negligibly different from one over the signal region $30 \mathrm{PE} < \cSi < 180 \mathrm{PE}$.
-%}
 \subsubsection{Elastic scattering}
 \label{subsubsec:Elastic}
 
