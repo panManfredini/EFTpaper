@@ -59,7 +59,6 @@ def TrapI(x,y):
 # Load detector response table
 data = np.loadtxt("detector_table.dat")
 E = data[:,0]; Gi = data[:,1:]
-
 # Load test recoil spectrum (1 TeV WIMP, O6)
 data = np.loadtxt("O6_1TeV.dat")
 Er = data[:,0]

@@ -40,12 +40,11 @@ The traditional approach for computing predictions of the rate of WIMP-nucleon s
 
 Unlike the more commonly studied types of interaction (SI,SD), which are not suppressed when $\vec{q} \rightarrow 0$ and for which the scattering rate on nucleons is expected to be largest for low energy nuclear recoils, some of the new EFT operators depend explicitly on $\vec{q}$ and so their interaction cross section is suppressed for low momentum transfers. Consequently, their scattering rate peaks at non-zero nuclear recoil energy. For sufficiently high WIMP masses, this may even occur outside typical analysis windows, which usually have an upper range of around $ 43\,\keVr$ (nuclear recoil equivalent
 energy) since they are designed to search for SI and SD interactions, which predict exponentially-falling recoil spectra (see Figure~\ref{fig:dRdE}). Due to the theoretical bias of only considering SI and SD interactions, high energy nuclear recoils remain unexplored in many experiments.
-	    
-%	    Another assumption that can be relaxed is that WIMP should scatter elastically, however there are models in which the incoming and outgoing WIMPs have different mass states ~\cite{InelasticIntro}. In the case where the outgoing state is more massive than the incoming state the event rate at low recoil energies can again be suppressed, hence analyses which apply an upper energy bound lose sensitivity to these types of interactions. Recently an inelastic adaptation of the EFT operator framework discussed above was developed~\cite{InelasticMath}. The operators presented in~\ref{eq:OpDef} are modified such that $\vec{v}^\perp_{inelastic} = \vec{v}^\perp_{elastic} +\frac{\delta}{\vert{\vec{q}}\vert^2}\vec{q}$. \RanComment{We should add here the dependency of $v_{min}$ on $\delta$}      
+
 	    Another typical assumption that can be relaxed is that WIMPs should scatter elastically with nuclei. There exist dark matter models in which the incoming and outgoing WIMPs have different mass states~\cite{InelasticIntro} separated by a keV-scale splitting. In the case where the outgoing state is more massive than the incoming state, the cross section for low recoil energies can again be suppressed, this time by scattering kinematics. Recently an inelastic adaptation of the EFT operator framework discussed above was developed~\cite{InelasticMath}. In this case the operators presented in Eqs.~\ref{eq:OpDef} are modified such that $\vec{v}^\perp_{inelastic} = \vec{v}^\perp_{elastic} +\frac{\delta_m}{\vert{\vec{q}}\vert^2}\vec{q}$. We consider this case in section \ref{subsubsec:Inelastic}.
 	    
 The EFT framework of \cite{Fitzpatrick:2012ib} is constructed at the WIMP-nucleon level and so each operator may be present independently for protons and neutrons, though UV models can of course correlate their couplings. The full EFT thus has 28 coupling parameters in addition to the WIMP mass, plus a mass splitting~$\delta$ in the inelastic case. This parameter space is too large to explore in full, so we take a similar approach to the SI/SD case 
-%and characterize the experimental limit by assuming only one active operator at a time, with the coupling to protons and neutrons for that operator set equal 
+
 and assume only one active operator at a time, considering it equally coupled to protons and neutrons (the ``isoscalar'' case). However, to facilitate the full exploitation of these results by the community, we provide in supplementary material a set of tools for converting any theoretical recoil spectrum $\mathrm{d}R/\mathrm{d}E$ into an accurate event rate prediction for this analysis, including all detector response and analysis efficiency effects. This may help to set a mildly conservative but quite accurate limit on arbitrary models in the full EFT parameter space, or any other particle dark matter model for which one can supply the expected recoil spectrum. These tools are described further in Appendix~\ref{app:response_table}.
 
 Motivated by these EFT extensions of the standard WIMP framework, we report on an analysis extending the searched recoil energy range up to $240~\keVr$ for the first time in the \Xehund\ experiment, and present exclusion limits on all operators for both elastic and inelastic WIMP cases.     
@@ -58,19 +57,16 @@ Motivated by these EFT extensions of the standard WIMP framework, we report on a
 \end{figure}
 
 \section{The \Xehund\  Detector}
-The \Xehund\ detector is a cylindrical %30\,cm~height, 30\,cm~diameter, 
-dual-phase xenon (liquid and gas) time projection chamber (TPC). It is installed at the Laboratori Nazionali del Gran Sasso (LNGS) in Italy
+The \Xehund\ detector is a cylindrical dual-phase xenon (liquid and gas) time projection chamber (TPC). It is installed at the Laboratori Nazionali del Gran Sasso (LNGS) in Italy
 and contains 161\,kg of liquid xenon (LXe), of which 62\,kg function as the active target ~\cite{xe100_instr2012}. 
 The detector uses of a total of 178~1-inch square Hamamatsu R8520-AL photomultiplier tubes (PMTs) employed in two arrays, one in the gas phase at the top of the TPC, and the other at the bottom, immersed in the LXe. 
 
 A particle interacting with the LXe deposits energy that creates both
 prompt scintillation (\Si{}) and delayed proportional scintillation (\Sii{}) which are detected using the two PMT arrays. The \Sii{} signal is produced by ionization electrons, drifted in an electric field of $530$V/cm towards the liquid-gas interface, where they are extracted to the gas phase using a stronger electric field of $\sim12$kV/cm in which the proportional scintillation occurs. 
 The spatial distribution of the \Sii{} signal on the top PMT array, together with the time difference between \Si{} and \Sii{} signals, provide respectively $x$-$y$ and $z$ position information for each interaction, allowing 3D position reconstruction to be achieved.
-%determines the X-Y position, while the time difference between the two signals gives the z-coordinate, and thus a 3D position reconstructions is achieved.
 
 Interaction in different locations of  the detector have different signatures. In order to take these effects into account, a correction is applied based on light and charge collection efficiency maps. These maps are prepared using calibration sources ranging up to energies well above $240~\keVr$, which is the highest energy recoil considered in this paper. The corrected signals (\cSi{},\cSiib{}) are spatially independent and uniform to all interactions~\cite{xe100_instr2012}. Note that some of the top PMTs saturate for large \Sii{} signals and we therefore use in this analysis only the bottom PMT array to infer the energy scale in \Sii{}.
 
 The $\Si{}/\Sii{}$ ratio is known to differ between nuclear recoil (NR) and electronic recoil (ER) interactions, and is thus used as a discriminating variable between a WIMP signal and ER background. The logarithm of this ratio, $\log(\cSiib{}/\cSi{})$ is referred later in the text as the discriminating ``$y$'' variable.
 
-% between ER background coming from $\gamma$, $\beta$ and NR signal coming from a WIMP. 
 

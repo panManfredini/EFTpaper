@@ -5,8 +5,8 @@
 %%%%%%%%%%%%%%%
 
 %\RequirePackage{lineno}
-\documentclass[twocolumn, %showpacs, showkeys, 
-amsmath, amssymb, amsfonts, floatfix, linenumbers,superscriptaddress,notitlepage]{revtex4-1} 
+\documentclass[twocolumn, %showpacs, showkeys, linenumbers 
+amsmath, amssymb, amsfonts, floatfix, superscriptaddress,notitlepage]{revtex4-1} 
 
 \usepackage[colorlinks=true, citecolor=green, filecolor=blue, linkcolor=blue, urlcolor=blue, pdfencoding=auto]{hyperref}
 %\usepackage{amsfonts}
@@ -114,12 +114,9 @@ amsmath, amssymb, amsfonts, floatfix, linenumbers,superscriptaddress,notitlepage
 
 
 \begin{document}
-%\linenumbers 
 
 \title{Effective field theory search for high-Energy nuclear recoils using the \Xehund\ dark matter detector}
-%\input{AuthorList}
 
-%\date{\today}
 \author{E.~Aprile}\columbia
 
 \author{J.~Aalbers}\nikhef
@@ -236,7 +233,8 @@ ee below
 
 \author{S.~Lindemann}\heidelberg\freiburg
 
-\author{M.~Lindner}\heidelberg
+\author{M.~Lindner}\heidelberg%\date{\today}
+
 
 \author{F.~Lombardi}\ucsd
 
@@ -360,7 +358,7 @@ ee below
 
 \begin{abstract} 
 
-We report on WIMP search results in the \Xehund\ detector using a non-relativistic effective field theory approach. The data from science run II (34 kg $\times$ 224.6 live days) was re-analyzed, with an increased recoil energy interval compared to previous analyses, ranging from $(6.6 - 240)~\keVr$. The data is found to be compatible with the background-only hypothesis. We present 90\% confidence level exclusion limits on the coupling constants of WIMP-nucleon effective operators using a binned profile likelihood method. We also consider the case of inelastic WIMP scattering, where incident WIMPs may up-scatter to a higher mass state, and set exclusion limits on this model as well. \RanComment{Finally, we heuristically examine the dark matter search data above the maximum recoil energy of $240~\keVr$ considered in this analysis, and find no candidate nuclear recoil events.}
+We report on WIMP search results in the \Xehund\ detector using a non-relativistic effective field theory approach. The data from science run II (34 kg $\times$ 224.6 live days) was re-analyzed, with an increased recoil energy interval compared to previous analyses, ranging from $(6.6 - 240)~\keVr$. The data is found to be compatible with the background-only hypothesis. We present 90\% confidence level exclusion limits on the coupling constants of WIMP-nucleon effective operators using a binned profile likelihood method. We also consider the case of inelastic WIMP scattering, where incident WIMPs may up-scatter to a higher mass state, and set exclusion limits on this model as well. 
 \end{abstract}
 
 \pacs{}
@@ -389,8 +387,7 @@ We report on WIMP search results in the \Xehund\ detector using a non-relativist
 
 %%% BIBLIOGRAPHY %%%
 
-%\bibliographystyle{apsrev}
-%\bibliographystyle{unsrt}
+
 \bibliography{EFTPaperBib}
 
 \end{document}

@@ -91,18 +91,15 @@ In both analysis channels, we use Eq.~\ref{eq:LeffEnergyScale} in order to compu
 where $E_\mathrm{nr}$ is the recoil energy, $\Ly$ is the average light yield in the detector, $\Leff$ is the scintillation efficiency relative to 122$\keVee$ as a function of $E_\mathrm{nr}$, and $S_\mathrm{ee}$ and $S_\mathrm{nr}$ are the quenching factors due to the externally applied electric field. Aside from $E_\mathrm{nr}$ and $\Leff$ these parameters have fixed values, namely $\Ly = 2.28 \pm 0.04$, $S_\mathrm{nr} = 0.95$, and $S_\mathrm{ee} = 0.58$. Recoils below $3~\keVr$ are assumed to produce no light. For details of the physics behind these parameters and the construction of the signal probability density function (PDF) please see \cite{Aprile:2012vw,xe100_run_combination}. 
 
 For the low-energy region, the expected \cSiib{} signal is computed following~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
-%For the lowE region, the expected cS2 signal can be calculated as well~\cite{DataMCXenon} using Eq.~\ref{eq:Qy},
-%
+
+
 \begin{equation}
 \label{eq:Qy}
 	\langle \cSiib \rangle = E_{\mathrm{nr}}\Qy Y   
 \end{equation}
-%
-%where $Y = 8.4366$   %where did you thake this number??
 where $Y = 8.3 \pm 0.3$ 
 is the amplification factor determined from the detector response to single electrons~\cite{XenonSingleElectron}, and $\Qy$ is the charge yield as a function of $E_\mathrm{nr}$. Applying the detector and PMT responses, and the acceptance as in \cite{xe100_run_combination}, defines the low-energy signal model over the region $3~\mathrm{PE} < \cSi{} < 30~\mathrm{PE}$, with $\cSiib{} > 73.5~\mathrm{PE}$ as the \Sii{} threshold.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THIS PART IS NOT NEEDED  Ale votes for removal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Eq. \ref{eq:Qy} hides a subtlety. The actual \cSiib{} PDF is composed of two pieces, a Poisson term associated with the initial charge liberation and a Gaussian term associated with the PMT response and other detector effects:
 %
 \begin{equation}
@@ -115,7 +112,6 @@ where $\mu_Q=E_{\mathrm{nr}}\Qy$ is the expected number of liberated charges in 
 
 For the high energy region we cannot produce the \Sii{} distribution in the same way as the method in~\cite{DataMCXenon}, since it  has not been calibrated for such high recoil energies. We therefore use the NR calibration data distribution in log($\mathrm{\cSiib/\cSi}$) to estimate the WIMP distribution. Above 180~PE in \cSi{}, the event yield of $^{241}$AmBe data is too low to estimate the distribution accurately. This forms the upper bound of this analysis. With the \cSiib{} distribution determined by this empirical method, we require only a prediction of the \cSi{} distribution. This is obtained from Equation (\ref{eq:LeffEnergyScale}), followed by the application of detector and PMT responses, as well as the acceptance given in Figure~\ref{fig:Acc}, which completes the high-energy signal model definition.
 
-%Examples of each for two EFT operators are shown in Figures ~\ref{fig:HighE} and \ref{fig:LowE}, with the rate normalized to give 5 events in the total energy range (low-energy and high-energy).
 Figures ~\ref{fig:HighE} and \ref{fig:LowE} shows dashed signal distribution examples for two EFT operators and for the low and the high energy region, respectively.
 In both cases, the signal distributions are normalized to yield 5 events in the total energy range (low-energy and high-energy).
 
