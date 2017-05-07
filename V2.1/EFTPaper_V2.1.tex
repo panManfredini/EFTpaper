@@ -36,6 +36,7 @@ amsmath, amssymb, amsfonts, floatfix, superscriptaddress,notitlepage]{revtex4-1}
 \newcommand{\cSi}{\ensuremath{\mathrm{cS1}}}
 \newcommand{\cSiib}{\ensuremath{\mathrm{cS2}_\mathrm{b}}}
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\let\svthefootnote\thefootnote
 \allowdisplaybreaks
 
 %%%%%%
@@ -112,6 +113,10 @@ amsmath, amssymb, amsfonts, floatfix, superscriptaddress,notitlepage]{revtex4-1}
 
 \newcommand{\freiburg}{\affiliation{Physikalisches Institut, Universit\"at Freiburg, 79104 Freiburg, Germany}}
 
+\newcommand\blankfootnote[1]{%
+  \let\thefootnote\relax\footnotetext{#1}%
+  \let\thefootnote\svthefootnote%
+}
 
 \begin{document}
 
