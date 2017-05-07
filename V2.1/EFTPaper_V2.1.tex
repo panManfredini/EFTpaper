@@ -39,6 +39,8 @@ amsmath, amssymb, amsfonts, floatfix, superscriptaddress,notitlepage]{revtex4-1}
 \let\svthefootnote\thefootnote
 \allowdisplaybreaks
 
+\interfootnotelinepenalty=10000 % Prevent footnotes breaking across columns/pages
+
 %%%%%%
 % For rendering code example in appendix
 \usepackage{listings}
